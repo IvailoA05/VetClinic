@@ -79,8 +79,10 @@
             // 
             this.txtPassword.Location = new System.Drawing.Point(250, 210);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(205, 27);
             this.txtPassword.TabIndex = 4;
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // btnLogin
             // 

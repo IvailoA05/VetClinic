@@ -35,7 +35,7 @@
             // 
             this.lblRegister.AutoSize = true;
             this.lblRegister.Font = new System.Drawing.Font("Segoe UI", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblRegister.Location = new System.Drawing.Point(303, 23);
+            this.lblRegister.Location = new System.Drawing.Point(209, 19);
             this.lblRegister.Name = "lblRegister";
             this.lblRegister.Size = new System.Drawing.Size(190, 59);
             this.lblRegister.TabIndex = 1;
@@ -45,7 +45,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(603, 450);
             this.Controls.Add(this.lblRegister);
             this.Name = "frmRegister";
             this.Text = "Register";

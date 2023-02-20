@@ -16,5 +16,10 @@ namespace VetClinic.View
         {
             InitializeComponent();
         }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

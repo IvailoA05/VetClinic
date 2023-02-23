@@ -65,6 +65,7 @@
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(205, 27);
             this.txtPassword.TabIndex = 3;
+            this.txtPassword.Text = "ffg";
             this.txtPassword.UseSystemPasswordChar = true;
             // 
             // label2

@@ -71,7 +71,7 @@ namespace VetClinic.View
         private void BtnToLogin_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmLogin login = new frmLogin();
+            frmLogIn login = new frmLogIn();
             login.ShowDialog();
         }
     }

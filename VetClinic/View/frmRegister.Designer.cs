@@ -84,7 +84,7 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(205, 27);
             this.txtUsername.TabIndex = 5;
-            this.txtUsername.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
+         //   this.txtUsername.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
             // label3
             // 

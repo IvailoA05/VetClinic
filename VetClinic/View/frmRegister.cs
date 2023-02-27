@@ -51,7 +51,7 @@ namespace VetClinic.View
                         Scommand.Parameters.AddWithValue("username", txtUsername.Text);
                         Scommand.Parameters.AddWithValue("password", txtPassword.Text);
                         Scommand.ExecuteNonQuery();
-                        MessageBox.Show("Your Account is created . Please login now.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Account is created, and now it can be used.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
                 else

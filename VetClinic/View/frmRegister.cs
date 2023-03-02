@@ -24,7 +24,7 @@ namespace VetClinic.View
         {
             try
             {
-                User.createUser(txtUsername.Text, txtPassword.Text, txtConfirm.Text);
+                User.createUser(txtUsername.Text, txtPassword.Text, txtConfirm.Text, chBoxIsAdmin.Checked);
                
             }
             catch(Exception ex)
@@ -32,5 +32,7 @@ namespace VetClinic.View
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+       
     }
 }

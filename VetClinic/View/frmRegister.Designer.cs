@@ -36,6 +36,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtConfirm = new System.Windows.Forms.TextBox();
             this.btnRegister = new System.Windows.Forms.Button();
+            this.chBoxIsAdmin = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblRegister
@@ -60,7 +62,7 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(253, 208);
+            this.txtPassword.Location = new System.Drawing.Point(303, 205);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(205, 27);
@@ -79,7 +81,7 @@
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(253, 130);
+            this.txtUsername.Location = new System.Drawing.Point(303, 127);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(205, 27);
             this.txtUsername.TabIndex = 5;
@@ -96,7 +98,7 @@
             // 
             // txtConfirm
             // 
-            this.txtConfirm.Location = new System.Drawing.Point(303, 278);
+            this.txtConfirm.Location = new System.Drawing.Point(303, 279);
             this.txtConfirm.Name = "txtConfirm";
             this.txtConfirm.PasswordChar = '*';
             this.txtConfirm.Size = new System.Drawing.Size(205, 27);
@@ -105,7 +107,7 @@
             // 
             // btnRegister
             // 
-            this.btnRegister.Location = new System.Drawing.Point(339, 353);
+            this.btnRegister.Location = new System.Drawing.Point(98, 387);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(154, 51);
             this.btnRegister.TabIndex = 8;
@@ -113,11 +115,34 @@
             this.btnRegister.UseVisualStyleBackColor = true;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
+            // chBoxIsAdmin
+            // 
+            this.chBoxIsAdmin.AutoSize = true;
+            this.chBoxIsAdmin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.chBoxIsAdmin.Location = new System.Drawing.Point(303, 333);
+            this.chBoxIsAdmin.Name = "chBoxIsAdmin";
+            this.chBoxIsAdmin.Size = new System.Drawing.Size(117, 32);
+            this.chBoxIsAdmin.TabIndex = 9;
+            this.chBoxIsAdmin.Text = "Is Admin";
+            this.chBoxIsAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.chBoxIsAdmin.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(354, 387);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(154, 51);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Cancel";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // frmRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(560, 450);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.chBoxIsAdmin);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.txtConfirm);
             this.Controls.Add(this.label3);
@@ -143,5 +168,7 @@
         private Label label3;
         private TextBox txtConfirm;
         private Button btnRegister;
+        private CheckBox chBoxIsAdmin;
+        private Button button1;
     }
 }

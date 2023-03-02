@@ -1,3 +1,6 @@
+using System.Data.SqlClient;
+using System.Net.NetworkInformation;
+
 namespace VetClinic
 {
     internal static class Program
@@ -5,6 +8,11 @@ namespace VetClinic
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>
+        /// 
+        private static string getDBPath = Directory.GetParent(Directory.GetParent(Path.GetDirectoryName(Environment.CurrentDirectory)).ToString()).ToString();
+        // "C:\Users\User\Source\Repos\IvailoA05\VetClinic\VetClinic\VetClinicDB.mdf"
+        public static string con = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename={getDBPath}\\VetClinicDB.mdf;Integrated Security=True";
+        
         [STAThread]
         static void Main()
         {

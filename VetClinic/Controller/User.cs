@@ -4,7 +4,6 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace VetClinic.Controller
 {
@@ -13,7 +12,9 @@ namespace VetClinic.Controller
         public static string GetUser(string username)
         {
             string password = "";
-            using (SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\User\Source\Repos\IvailoA05\VetClinic\VetClinic\VetClinicDB.mdf"";Integrated Security=True"))
+            //  using (SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\User\Source\Repos\IvailoA05\VetClinic\VetClinic\VetClinicDB.mdf"";Integrated Security=True"))
+            using (SqlConnection con = new SqlConnection(Program.con))
+           
             {
                 con.Open();
                 string sqlquery = "SELECT * FROM [User] WHERE username = @UName";
@@ -31,10 +32,11 @@ namespace VetClinic.Controller
             }
             return password;
         }
-        public static void createUser(string username, string password, string cnfmpass)
+        public static void createUser(string username, string password, string cnfmpass, bool isAdmin)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\User\Source\Repos\IvailoA05\VetClinic\VetClinic\VetClinicDB.mdf"";Integrated Security=True");
-            con.Open();
+            //SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\User\Source\Repos\IvailoA05\VetClinic\VetClinic\VetClinicDB.mdf"";Integrated Security=True");
+            SqlConnection con = new SqlConnection(Program.con);
+                con.Open();
             if (cnfmpass != string.Empty || password != string.Empty || password != string.Empty)
             {
                 if (password == cnfmpass)
@@ -50,18 +52,19 @@ namespace VetClinic.Controller
                     else
                     {
                         datareader.Close();
-                        
-                        
 
-                        comm = new SqlCommand("insert into [User] values(@username,@password)", con);
+
+
+                        comm = new SqlCommand("insert into [User] values(@username,@password, @IsAdmin)", con);
                         comm.Parameters.AddWithValue("username", username);
                         comm.Parameters.AddWithValue("password", password);
+                        comm.Parameters.AddWithValue("IsAdmin", isAdmin);
                         comm.ExecuteNonQuery();
                         MessageBox.Show("Your Account is created . Please login now.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                       
+
                         con.Close();
-                        
+
                     }
                 }
                 else

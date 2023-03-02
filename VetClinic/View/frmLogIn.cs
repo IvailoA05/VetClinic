@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VetClinic.Controller;
 
 namespace VetClinic.View
 {
@@ -24,9 +25,17 @@ namespace VetClinic.View
             reg.Show();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
-
+            string password = User.GetUser(txtUsername.Text);
+            if(password == txtPassword.Text)
+            {
+                MessageBox.Show("Succesfully logged in!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Invalid credentials!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

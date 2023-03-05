@@ -66,7 +66,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(205, 27);
-            this.txtPassword.TabIndex = 3;
+            this.txtPassword.TabIndex = 2;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
             // label2
@@ -84,7 +84,7 @@
             this.txtUsername.Location = new System.Drawing.Point(303, 127);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(205, 27);
-            this.txtUsername.TabIndex = 5;
+            this.txtUsername.TabIndex = 1;
             // 
             // label3
             // 
@@ -102,7 +102,7 @@
             this.txtConfirm.Name = "txtConfirm";
             this.txtConfirm.PasswordChar = '*';
             this.txtConfirm.Size = new System.Drawing.Size(205, 27);
-            this.txtConfirm.TabIndex = 7;
+            this.txtConfirm.TabIndex = 3;
             this.txtConfirm.UseSystemPasswordChar = true;
             // 
             // btnRegister

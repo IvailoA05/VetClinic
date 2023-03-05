@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace VetClinic.Controller
@@ -32,6 +33,7 @@ namespace VetClinic.Controller
             }
             return password;
         }
+        private static Regex validatePassword = new Regex("^(?=.?[A-Z])(?=.?[a-z])(?=.*?[0-9]).{8,}");
         public static void createUser(string username, string password, string cnfmpass, bool isAdmin)
         {
             //SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\User\Source\Repos\IvailoA05\VetClinic\VetClinic\VetClinicDB.mdf"";Integrated Security=True");
@@ -48,6 +50,14 @@ namespace VetClinic.Controller
                         datareader.Close();
                         con.Close();
                         throw new Exception("Username Already exist please try another");
+                    }
+                    else if (password.Length < 8)
+                    {
+                        MessageBox.Show("Password must be at least 8 characters!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    if (!validatePassword.IsMatch(password))
+                    {
+                        MessageBox.Show("Password must contain at least one uppercase character, one lowercase character and a number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else
                     {

@@ -33,7 +33,7 @@ namespace VetClinic.Controller
             }
             return password;
         }
-        private static Regex validatePassword = new Regex("^(?=.?[A-Z])(?=.?[a-z])(?=.*?[0-9]).{8,}");
+        private static Regex validatePassword = new Regex("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{8,}$");
         public static void createUser(string username, string password, string cnfmpass, bool isAdmin)
         {
             //SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\User\Source\Repos\IvailoA05\VetClinic\VetClinic\VetClinicDB.mdf"";Integrated Security=True");
@@ -55,11 +55,7 @@ namespace VetClinic.Controller
                     {
                         MessageBox.Show("Password must be at least 8 characters!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                    if (!validatePassword.IsMatch(password))
-                    {
-                        MessageBox.Show("Password must contain at least one uppercase character, one lowercase character and a number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    else
+                    if (validatePassword.IsMatch(password))
                     {
                         datareader.Close();
 
@@ -74,6 +70,11 @@ namespace VetClinic.Controller
 
 
                         con.Close();
+                        
+                    }
+                    else
+                    {
+                        MessageBox.Show("Password must contain at least one uppercase character, one lowercase character and a number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                     }
                 }

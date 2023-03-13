@@ -13,7 +13,6 @@ namespace VetClinic.Controller
         public static string GetUser(string username)
         {
             string password = "";
-            //  using (SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\User\Source\Repos\IvailoA05\VetClinic\VetClinic\VetClinicDB.mdf"";Integrated Security=True"))
             using (SqlConnection con = new SqlConnection(Program.con))
            
             {
@@ -36,7 +35,6 @@ namespace VetClinic.Controller
         private static Regex validatePassword = new Regex("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{8,}$");
         public static void createUser(string username, string password, string cnfmpass, bool isAdmin)
         {
-            //SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\User\Source\Repos\IvailoA05\VetClinic\VetClinic\VetClinicDB.mdf"";Integrated Security=True");
             SqlConnection con = new SqlConnection(Program.con);
                 con.Open();
             if (cnfmpass != string.Empty || password != string.Empty || password != string.Empty)
@@ -66,7 +64,7 @@ namespace VetClinic.Controller
                         comm.Parameters.AddWithValue("password", password);
                         comm.Parameters.AddWithValue("IsAdmin", isAdmin);
                         comm.ExecuteNonQuery();
-                        MessageBox.Show("Your Account is created . Please login now.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Your Account is created, and can be used.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
                         con.Close();

@@ -25,7 +25,9 @@ namespace VetClinic.View
             try
             {
                 User.createUser(txtUsername.Text, txtPassword.Text, txtConfirm.Text, chBoxIsAdmin.Checked);
-               
+                this.Hide();
+                frmAdminPanel admin = new frmAdminPanel();
+                admin.Show();
             }
             catch(Exception ex)
             {
@@ -33,9 +35,11 @@ namespace VetClinic.View
             }
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void btnCancel_Click(object sender, EventArgs e)
         {
-
+            frmAdminPanel admin = new frmAdminPanel();
+            Hide();
+            admin.Show();
         }
     }
 }

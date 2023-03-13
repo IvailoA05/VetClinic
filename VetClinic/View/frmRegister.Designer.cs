@@ -37,7 +37,7 @@
             this.txtConfirm = new System.Windows.Forms.TextBox();
             this.btnRegister = new System.Windows.Forms.Button();
             this.chBoxIsAdmin = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblRegister
@@ -59,7 +59,6 @@
             this.label1.Size = new System.Drawing.Size(106, 28);
             this.label1.TabIndex = 2;
             this.label1.Text = "Username";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtPassword
             // 
@@ -128,21 +127,22 @@
             this.chBoxIsAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.chBoxIsAdmin.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnCancel
             // 
-            this.button1.Location = new System.Drawing.Point(354, 387);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(154, 51);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Cancel";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnCancel.Location = new System.Drawing.Point(354, 387);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(154, 51);
+            this.btnCancel.TabIndex = 10;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // frmRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(560, 450);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.chBoxIsAdmin);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.txtConfirm);
@@ -170,6 +170,6 @@
         private TextBox txtConfirm;
         private Button btnRegister;
         private CheckBox chBoxIsAdmin;
-        private Button button1;
+        private Button btnCancel;
     }
 }

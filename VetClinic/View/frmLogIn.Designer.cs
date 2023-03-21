@@ -34,8 +34,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnRegister = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblLogin
@@ -86,7 +84,7 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(288, 346);
+            this.btnLogin.Location = new System.Drawing.Point(201, 271);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(154, 51);
             this.btnLogin.TabIndex = 6;
@@ -94,33 +92,11 @@
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(101, 273);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(271, 20);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Don\'t have an account? Register now!";
-            // 
-            // btnRegister
-            // 
-            this.btnRegister.Location = new System.Drawing.Point(384, 266);
-            this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(71, 35);
-            this.btnRegister.TabIndex = 8;
-            this.btnRegister.Text = "Register";
-            this.btnRegister.UseVisualStyleBackColor = true;
-            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
-            // 
             // frmLogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(549, 450);
-            this.Controls.Add(this.btnRegister);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.label2);
@@ -142,7 +118,5 @@
         private Label label2;
         private TextBox txtPassword;
         private Button btnLogin;
-        private Label label3;
-        private Button btnRegister;
     }
 }

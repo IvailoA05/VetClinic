@@ -19,13 +19,6 @@ namespace VetClinic.View
             InitializeComponent();
         }
 
-        private void btnRegister_Click(object sender, EventArgs e)
-        {
-            frmRegister reg = new frmRegister();
-            Hide();
-            reg.Show();
-        }
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string username = txtUsername.Text;

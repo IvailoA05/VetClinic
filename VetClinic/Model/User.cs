@@ -53,9 +53,9 @@ namespace VetClinic.Controller
                     {
                         MessageBox.Show("Password must be at least 8 characters!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                    else if (isAdmin == false && phone == string.Empty || address == string.Empty)
+                    if (isAdmin == false && phone == string.Empty || address == string.Empty)
                     {
-                        MessageBox.Show("Non admin accounts must have phone and address!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        throw new Exception("Non admin accounts must have phone and address!");
                     }
                     if (validatePassword.IsMatch(password))
                     {

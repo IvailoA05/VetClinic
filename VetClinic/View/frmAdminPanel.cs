@@ -20,7 +20,7 @@ namespace VetClinic.View
             DataTable dt = new DataTable();
             using (SqlConnection con = new SqlConnection(Program.con))
             {
-                using (SqlCommand cmd = new SqlCommand("SELECT Id, Username, Password, IsAdmin FROM [User]", con))
+                using (SqlCommand cmd = new SqlCommand("SELECT Id, Username, Password, IsAdmin, Address, Phone FROM [User]", con))
                 {
                     using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
                     {

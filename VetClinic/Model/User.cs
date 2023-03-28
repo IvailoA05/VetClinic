@@ -33,7 +33,7 @@ namespace VetClinic.Controller
             return password;
         }
         private static Regex validatePassword = new Regex("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{8,}$");
-        public static void createUser(string username, string password, string cnfmpass, bool isAdmin)
+        public static void createUser(string username, string password, string cnfmpass, bool isAdmin, string phone, string address)
         {
             SqlConnection con = new SqlConnection(Program.con);
                 con.Open();
@@ -53,18 +53,24 @@ namespace VetClinic.Controller
                     {
                         MessageBox.Show("Password must be at least 8 characters!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
+                    if (isAdmin == false && (phone == string.Empty || address == string.Empty))
+                    {
+                        throw new Exception("Non admin accounts must have phone and address!");
+                    }
                     if (validatePassword.IsMatch(password))
                     {
                         datareader.Close();
 
 
 
-                        comm = new SqlCommand("insert into [User] values(@username,@password, @IsAdmin)", con);
+                        comm = new SqlCommand("insert into [User] values(@username,@password,@IsAdmin,@phone,@address)", con);
                         comm.Parameters.AddWithValue("username", username);
                         comm.Parameters.AddWithValue("password", password);
                         comm.Parameters.AddWithValue("IsAdmin", isAdmin);
+                        comm.Parameters.AddWithValue("phone", phone);
+                        comm.Parameters.AddWithValue("address", address);
                         comm.ExecuteNonQuery();
-                        MessageBox.Show("Your Account is created, and can be used.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Successfully created account.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
                         con.Close();
@@ -73,7 +79,6 @@ namespace VetClinic.Controller
                     else
                     {
                         MessageBox.Show("Password must contain at least one uppercase character, one lowercase character and a number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
                     }
                 }
                 else

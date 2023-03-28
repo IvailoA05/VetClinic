@@ -38,6 +38,10 @@
             this.btnRegister = new System.Windows.Forms.Button();
             this.chBoxIsAdmin = new System.Windows.Forms.CheckBox();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.txtPhone = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblRegister
@@ -107,7 +111,7 @@
             // 
             // btnRegister
             // 
-            this.btnRegister.Location = new System.Drawing.Point(98, 387);
+            this.btnRegister.Location = new System.Drawing.Point(98, 499);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(154, 51);
             this.btnRegister.TabIndex = 8;
@@ -119,7 +123,7 @@
             // 
             this.chBoxIsAdmin.AutoSize = true;
             this.chBoxIsAdmin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.chBoxIsAdmin.Location = new System.Drawing.Point(303, 333);
+            this.chBoxIsAdmin.Location = new System.Drawing.Point(303, 321);
             this.chBoxIsAdmin.Name = "chBoxIsAdmin";
             this.chBoxIsAdmin.Size = new System.Drawing.Size(117, 32);
             this.chBoxIsAdmin.TabIndex = 9;
@@ -129,7 +133,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(354, 387);
+            this.btnCancel.Location = new System.Drawing.Point(354, 499);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(154, 51);
             this.btnCancel.TabIndex = 10;
@@ -137,11 +141,50 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // txtPhone
+            // 
+            this.txtPhone.Location = new System.Drawing.Point(303, 371);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(205, 27);
+            this.txtPhone.TabIndex = 11;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(98, 448);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(87, 28);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Address";
+            // 
+            // txtAddress
+            // 
+            this.txtAddress.HideSelection = false;
+            this.txtAddress.Location = new System.Drawing.Point(303, 449);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(205, 27);
+            this.txtAddress.TabIndex = 12;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(98, 370);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(71, 28);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Phone";
+            // 
             // frmRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(560, 450);
+            this.ClientSize = new System.Drawing.Size(560, 589);
+            this.Controls.Add(this.txtPhone);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtAddress);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.chBoxIsAdmin);
             this.Controls.Add(this.btnRegister);
@@ -171,5 +214,9 @@
         private Button btnRegister;
         private CheckBox chBoxIsAdmin;
         private Button btnCancel;
+        private TextBox txtPhone;
+        private Label label4;
+        private TextBox txtAddress;
+        private Label label5;
     }
 }

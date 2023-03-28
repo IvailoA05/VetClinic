@@ -24,7 +24,7 @@ namespace VetClinic.View
         {
             try
             {
-                User.createUser(txtUsername.Text, txtPassword.Text, txtConfirm.Text, chBoxIsAdmin.Checked);
+                User.createUser(txtUsername.Text, txtPassword.Text, txtConfirm.Text, chBoxIsAdmin.Checked, txtPhone.Text, txtAddress.Text);
                 this.Hide();
                 frmAdminPanel admin = new frmAdminPanel();
                 admin.Show();
@@ -41,5 +41,6 @@ namespace VetClinic.View
             Hide();
             admin.Show();
         }
+
     }
 }

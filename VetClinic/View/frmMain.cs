@@ -15,6 +15,11 @@ namespace VetClinic.View
         public frmMain()
         {
             InitializeComponent();
+
+            if (isAdmin)
+            {
+                btnAdminTools.Visible = false;
+            }
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)

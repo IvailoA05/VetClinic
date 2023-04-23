@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.btnLogOut = new System.Windows.Forms.Button();
+            this.btnAdminTools = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnLogOut
@@ -41,11 +42,21 @@
             this.btnLogOut.UseVisualStyleBackColor = true;
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
+            // btnAdminTools
+            // 
+            this.btnAdminTools.Location = new System.Drawing.Point(12, 12);
+            this.btnAdminTools.Name = "btnAdminTools";
+            this.btnAdminTools.Size = new System.Drawing.Size(105, 38);
+            this.btnAdminTools.TabIndex = 1;
+            this.btnAdminTools.Text = "Admin Tools";
+            this.btnAdminTools.UseVisualStyleBackColor = true;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnAdminTools);
             this.Controls.Add(this.btnLogOut);
             this.Name = "frmMain";
             this.Text = "frmMain";
@@ -56,5 +67,6 @@
         #endregion
 
         private Button btnLogOut;
+        private Button btnAdminTools;
     }
 }

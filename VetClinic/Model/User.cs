@@ -47,7 +47,7 @@ namespace VetClinic.Controller
                     {
                         datareader.Close();
                         con.Close();
-                        throw new Exception("Username Already exist please try another");
+                        throw new Exception("Username Already exist, please try another");
                     }
                     else if (password.Length < 8)
                     {
@@ -55,7 +55,7 @@ namespace VetClinic.Controller
                     }
                     if (isAdmin == false && (phone == string.Empty || address == string.Empty))
                     {
-                        throw new Exception("Non admin accounts must have phone and address!");
+                        throw new Exception("Non admin accounts, must have phone and address!");
                     }
                     if (validatePassword.IsMatch(password))
                     {

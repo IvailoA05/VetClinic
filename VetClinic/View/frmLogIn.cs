@@ -51,9 +51,11 @@ namespace VetClinic.View
 
                     if (isAdminObj != null && isAdminObj != DBNull.Value)
                     {
-                        bool isAdmin = (bool)isAdminObj;
-                        if (isAdmin)
+                        Program.isAdmin = (bool)isAdminObj;
+             
+                        if (Program.isAdmin)
                         {
+                            
                             this.Hide();
                             frmAdminPanel frmAdminPanel = new frmAdminPanel();
                             frmAdminPanel.Show();

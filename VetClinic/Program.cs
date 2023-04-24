@@ -13,6 +13,8 @@ namespace VetClinic
         // "C:\Users\User\Source\Repos\IvailoA05\VetClinic\VetClinic\VetClinicDB.mdf"
         public static string con = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename={getDBPath}\\VetClinicDB.mdf;Integrated Security=True";
         
+        public static bool isAdmin = false;
+        
         [STAThread]
         static void Main()
         {

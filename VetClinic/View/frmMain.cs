@@ -16,9 +16,9 @@ namespace VetClinic.View
         {
             InitializeComponent();
 
-            if (isAdmin)
+            if (Program.isAdmin)
             {
-                btnAdminTools.Visible = false;
+                btnAdminTools.Visible = true;
             }
         }
 

@@ -50,6 +50,7 @@
             this.btnAdminTools.TabIndex = 1;
             this.btnAdminTools.Text = "Admin Tools";
             this.btnAdminTools.UseVisualStyleBackColor = true;
+            this.btnAdminTools.Visible = false;
             // 
             // frmMain
             // 

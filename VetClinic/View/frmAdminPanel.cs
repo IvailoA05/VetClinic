@@ -77,6 +77,8 @@ namespace VetClinic.View
 
             string newUsername = txtUsername.Text.Trim();
             string newPassword = txtPassword.Text.Trim();
+            string newAddress = txtAddress.Text.Trim();
+            string newPhone = txtPhone.Text.Trim();
             bool IsAdmin = chBoxIsAdmin.Checked;
 
             using (SqlConnection con = new SqlConnection(Program.con))
@@ -99,10 +101,12 @@ namespace VetClinic.View
             {
                 con.Open();
 
-                SqlCommand updateCommand = new SqlCommand("UPDATE [User] SET Username = @Username, Password = @Password, isAdmin = @IsAdmin WHERE Id = @Id", con);
+                SqlCommand updateCommand = new SqlCommand("UPDATE [User] SET Username = @Username, Password = @Password, isAdmin = @IsAdmin, Address = @Address, Phone = @Phone WHERE Id = @Id", con);
                 updateCommand.Parameters.AddWithValue("@Username", newUsername);
                 updateCommand.Parameters.AddWithValue("@Password", newPassword);
                 updateCommand.Parameters.AddWithValue("@IsAdmin", IsAdmin);
+                updateCommand.Parameters.AddWithValue("@Address", newAddress);
+                updateCommand.Parameters.AddWithValue("@Phone", newPhone);
                 updateCommand.Parameters.AddWithValue("@Id", Id);
                 updateCommand.ExecuteNonQuery();
 

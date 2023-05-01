@@ -51,6 +51,7 @@
             this.btnAdminTools.Text = "Admin Tools";
             this.btnAdminTools.UseVisualStyleBackColor = true;
             this.btnAdminTools.Visible = false;
+            this.btnAdminTools.Click += new System.EventHandler(this.btnAdminTools_Click);
             // 
             // frmMain
             // 

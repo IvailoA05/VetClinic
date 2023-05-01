@@ -29,5 +29,13 @@ namespace VetClinic.View
             login.Show();
             MessageBox.Show("You have succesfully logged out!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void btnAdminTools_Click(object sender, EventArgs e)
+        {
+            frmAdminTools tools = new frmAdminTools();
+            Hide();
+            tools.Show();
+            MessageBox.Show("You have entered into Admin Tools menu!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

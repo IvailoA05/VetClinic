@@ -16,5 +16,20 @@ namespace VetClinic.View
         {
             InitializeComponent();
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            frmMain main = new frmMain();
+            Hide();
+            main.Show();
+        }
+
+        private void btnUsers_Click(object sender, EventArgs e)
+        {
+            frmAdminPanel admins = new frmAdminPanel();
+            Hide();
+            admins.Show();
+            MessageBox.Show("You have entered into Users menu!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

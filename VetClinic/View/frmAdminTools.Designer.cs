@@ -28,12 +28,120 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.lblLogin = new System.Windows.Forms.Label();
+            this.btnUsers = new System.Windows.Forms.Button();
+            this.btnAnimals = new System.Windows.Forms.Button();
+            this.btnBreed = new System.Windows.Forms.Button();
+            this.btnCategory = new System.Windows.Forms.Button();
+            this.btnMedications = new System.Windows.Forms.Button();
+            this.btnMedType = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(316, 387);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(154, 51);
+            this.btnBack.TabIndex = 14;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // lblLogin
+            // 
+            this.lblLogin.AutoSize = true;
+            this.lblLogin.Font = new System.Drawing.Font("Segoe UI", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblLogin.Location = new System.Drawing.Point(180, 19);
+            this.lblLogin.Name = "lblLogin";
+            this.lblLogin.Size = new System.Drawing.Size(440, 59);
+            this.lblLogin.TabIndex = 15;
+            this.lblLogin.Text = "Select a table to edit";
+            // 
+            // btnUsers
+            // 
+            this.btnUsers.Location = new System.Drawing.Point(87, 120);
+            this.btnUsers.Name = "btnUsers";
+            this.btnUsers.Size = new System.Drawing.Size(154, 51);
+            this.btnUsers.TabIndex = 16;
+            this.btnUsers.Text = "Users";
+            this.btnUsers.UseVisualStyleBackColor = true;
+            this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
+            // 
+            // btnAnimals
+            // 
+            this.btnAnimals.Location = new System.Drawing.Point(87, 199);
+            this.btnAnimals.Name = "btnAnimals";
+            this.btnAnimals.Size = new System.Drawing.Size(154, 51);
+            this.btnAnimals.TabIndex = 17;
+            this.btnAnimals.Text = "Animals";
+            this.btnAnimals.UseVisualStyleBackColor = true;
+            // 
+            // btnBreed
+            // 
+            this.btnBreed.Location = new System.Drawing.Point(87, 287);
+            this.btnBreed.Name = "btnBreed";
+            this.btnBreed.Size = new System.Drawing.Size(154, 51);
+            this.btnBreed.TabIndex = 18;
+            this.btnBreed.Text = "Breed";
+            this.btnBreed.UseVisualStyleBackColor = true;
+            // 
+            // btnCategory
+            // 
+            this.btnCategory.Location = new System.Drawing.Point(534, 120);
+            this.btnCategory.Name = "btnCategory";
+            this.btnCategory.Size = new System.Drawing.Size(154, 51);
+            this.btnCategory.TabIndex = 19;
+            this.btnCategory.Text = "Category";
+            this.btnCategory.UseVisualStyleBackColor = true;
+            // 
+            // btnMedications
+            // 
+            this.btnMedications.Location = new System.Drawing.Point(534, 199);
+            this.btnMedications.Name = "btnMedications";
+            this.btnMedications.Size = new System.Drawing.Size(154, 51);
+            this.btnMedications.TabIndex = 20;
+            this.btnMedications.Text = "Medications";
+            this.btnMedications.UseVisualStyleBackColor = true;
+            // 
+            // btnMedType
+            // 
+            this.btnMedType.Location = new System.Drawing.Point(534, 287);
+            this.btnMedType.Name = "btnMedType";
+            this.btnMedType.Size = new System.Drawing.Size(154, 51);
+            this.btnMedType.TabIndex = 21;
+            this.btnMedType.Text = "Medication Type";
+            this.btnMedType.UseVisualStyleBackColor = true;
+            // 
+            // frmAdminTools
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnMedType);
+            this.Controls.Add(this.btnMedications);
+            this.Controls.Add(this.btnCategory);
+            this.Controls.Add(this.btnBreed);
+            this.Controls.Add(this.btnAnimals);
+            this.Controls.Add(this.btnUsers);
+            this.Controls.Add(this.lblLogin);
+            this.Controls.Add(this.btnBack);
+            this.Name = "frmAdminTools";
             this.Text = "frmAdminTools";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private Button btnBack;
+        private Label lblLogin;
+        private Button btnUsers;
+        private Button btnAnimals;
+        private Button btnBreed;
+        private Button btnCategory;
+        private Button btnMedications;
+        private Button btnMedType;
     }
 }

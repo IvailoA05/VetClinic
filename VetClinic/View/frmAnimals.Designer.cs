@@ -128,7 +128,7 @@
             // dtpBirthday
             // 
             dtpBirthday.Format = DateTimePickerFormat.Custom;
-            dtpBirthday.CustomFormat = "d/m/yyyy" ;
+            dtpBirthday.CustomFormat = "d/M/yyyy" ;
             dtpBirthday.Location = new Point(896, 150);
             dtpBirthday.Name = "dtpBirthday";
             dtpBirthday.Size = new Size(205, 27);
@@ -136,7 +136,8 @@
             // 
             // dtpVaccdate
             // 
-            dtpVaccdate.Format = DateTimePickerFormat.Short;
+            dtpVaccdate.Format = DateTimePickerFormat.Custom;
+            dtpVaccdate.CustomFormat = "d/M/yyyy";
             dtpVaccdate.Location = new Point(896, 277);
             dtpVaccdate.Name = "dtpVaccdate";
             dtpVaccdate.Size = new Size(205, 27);

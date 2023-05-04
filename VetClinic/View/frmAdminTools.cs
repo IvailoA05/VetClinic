@@ -31,5 +31,13 @@ namespace VetClinic.View
             admins.Show();
             MessageBox.Show("You have entered into Users menu!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void btnAnimals_Click(object sender, EventArgs e)
+        {
+            frmAnimals animals = new frmAnimals();
+            Hide();
+            animals.Show();
+            MessageBox.Show("You have entered into Animals menu!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

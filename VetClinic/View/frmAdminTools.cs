@@ -39,5 +39,21 @@ namespace VetClinic.View
             animals.Show();
             MessageBox.Show("You have entered into Animals menu!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void btnBreed_Click(object sender, EventArgs e)
+        {
+            frmBreed breed = new frmBreed();
+            Hide();
+            breed.Show();
+            MessageBox.Show("You have entered into Breed menu!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btnCategory_Click(object sender, EventArgs e)
+        {
+            frmCategory category = new frmCategory();
+            Hide();
+            category.Show();
+            MessageBox.Show("You have entered into Category menu!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

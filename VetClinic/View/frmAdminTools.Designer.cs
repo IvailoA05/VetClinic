@@ -28,109 +28,109 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnBack = new Button();
-            lblLogin = new Label();
-            btnUsers = new Button();
-            btnAnimals = new Button();
-            btnBreed = new Button();
-            btnCategory = new Button();
-            btnMedications = new Button();
-            btnMedType = new Button();
-            SuspendLayout();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.lblLogin = new System.Windows.Forms.Label();
+            this.btnUsers = new System.Windows.Forms.Button();
+            this.btnAnimals = new System.Windows.Forms.Button();
+            this.btnBreed = new System.Windows.Forms.Button();
+            this.btnCategory = new System.Windows.Forms.Button();
+            this.btnMedications = new System.Windows.Forms.Button();
+            this.btnMedType = new System.Windows.Forms.Button();
+            this.SuspendLayout();
             // 
             // btnBack
             // 
-            btnBack.Location = new Point(316, 387);
-            btnBack.Name = "btnBack";
-            btnBack.Size = new Size(154, 51);
-            btnBack.TabIndex = 14;
-            btnBack.Text = "Back";
-            btnBack.UseVisualStyleBackColor = true;
-            btnBack.Click += btnBack_Click;
+            this.btnBack.Location = new System.Drawing.Point(316, 387);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(154, 51);
+            this.btnBack.TabIndex = 14;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
             // 
             // lblLogin
             // 
-            lblLogin.AutoSize = true;
-            lblLogin.Font = new Font("Segoe UI", 25.8F, FontStyle.Bold, GraphicsUnit.Point);
-            lblLogin.Location = new Point(180, 19);
-            lblLogin.Name = "lblLogin";
-            lblLogin.Size = new Size(440, 59);
-            lblLogin.TabIndex = 15;
-            lblLogin.Text = "Select a table to edit";
+            this.lblLogin.AutoSize = true;
+            this.lblLogin.Font = new System.Drawing.Font("Segoe UI", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblLogin.Location = new System.Drawing.Point(180, 19);
+            this.lblLogin.Name = "lblLogin";
+            this.lblLogin.Size = new System.Drawing.Size(440, 59);
+            this.lblLogin.TabIndex = 15;
+            this.lblLogin.Text = "Select a table to edit";
             // 
             // btnUsers
             // 
-            btnUsers.Location = new Point(87, 120);
-            btnUsers.Name = "btnUsers";
-            btnUsers.Size = new Size(154, 51);
-            btnUsers.TabIndex = 16;
-            btnUsers.Text = "Users";
-            btnUsers.UseVisualStyleBackColor = true;
-            btnUsers.Click += btnUsers_Click;
+            this.btnUsers.Location = new System.Drawing.Point(87, 120);
+            this.btnUsers.Name = "btnUsers";
+            this.btnUsers.Size = new System.Drawing.Size(154, 51);
+            this.btnUsers.TabIndex = 16;
+            this.btnUsers.Text = "Users";
+            this.btnUsers.UseVisualStyleBackColor = true;
             // 
             // btnAnimals
             // 
-            btnAnimals.Location = new Point(87, 199);
-            btnAnimals.Name = "btnAnimals";
-            btnAnimals.Size = new Size(154, 51);
-            btnAnimals.TabIndex = 17;
-            btnAnimals.Text = "Animals";
-            btnAnimals.UseVisualStyleBackColor = true;
-            btnAnimals.Click += btnAnimals_Click;
+            this.btnAnimals.Location = new System.Drawing.Point(87, 199);
+            this.btnAnimals.Name = "btnAnimals";
+            this.btnAnimals.Size = new System.Drawing.Size(154, 51);
+            this.btnAnimals.TabIndex = 17;
+            this.btnAnimals.Text = "Animals";
+            this.btnAnimals.UseVisualStyleBackColor = true;
             // 
             // btnBreed
             // 
-            btnBreed.Location = new Point(87, 287);
-            btnBreed.Name = "btnBreed";
-            btnBreed.Size = new Size(154, 51);
-            btnBreed.TabIndex = 18;
-            btnBreed.Text = "Breed";
-            btnBreed.UseVisualStyleBackColor = true;
+            this.btnBreed.Location = new System.Drawing.Point(87, 287);
+            this.btnBreed.Name = "btnBreed";
+            this.btnBreed.Size = new System.Drawing.Size(154, 51);
+            this.btnBreed.TabIndex = 18;
+            this.btnBreed.Text = "Breed";
+            this.btnBreed.UseVisualStyleBackColor = true;
+            this.btnBreed.Click += new System.EventHandler(this.btnBreed_Click);
             // 
             // btnCategory
             // 
-            btnCategory.Location = new Point(534, 120);
-            btnCategory.Name = "btnCategory";
-            btnCategory.Size = new Size(154, 51);
-            btnCategory.TabIndex = 19;
-            btnCategory.Text = "Category";
-            btnCategory.UseVisualStyleBackColor = true;
+            this.btnCategory.Location = new System.Drawing.Point(534, 120);
+            this.btnCategory.Name = "btnCategory";
+            this.btnCategory.Size = new System.Drawing.Size(154, 51);
+            this.btnCategory.TabIndex = 19;
+            this.btnCategory.Text = "Category";
+            this.btnCategory.UseVisualStyleBackColor = true;
+            this.btnCategory.Click += new System.EventHandler(this.btnCategory_Click);
             // 
             // btnMedications
             // 
-            btnMedications.Location = new Point(534, 199);
-            btnMedications.Name = "btnMedications";
-            btnMedications.Size = new Size(154, 51);
-            btnMedications.TabIndex = 20;
-            btnMedications.Text = "Medications";
-            btnMedications.UseVisualStyleBackColor = true;
+            this.btnMedications.Location = new System.Drawing.Point(534, 199);
+            this.btnMedications.Name = "btnMedications";
+            this.btnMedications.Size = new System.Drawing.Size(154, 51);
+            this.btnMedications.TabIndex = 20;
+            this.btnMedications.Text = "Medications";
+            this.btnMedications.UseVisualStyleBackColor = true;
             // 
             // btnMedType
             // 
-            btnMedType.Location = new Point(534, 287);
-            btnMedType.Name = "btnMedType";
-            btnMedType.Size = new Size(154, 51);
-            btnMedType.TabIndex = 21;
-            btnMedType.Text = "Medication Type";
-            btnMedType.UseVisualStyleBackColor = true;
+            this.btnMedType.Location = new System.Drawing.Point(534, 287);
+            this.btnMedType.Name = "btnMedType";
+            this.btnMedType.Size = new System.Drawing.Size(154, 51);
+            this.btnMedType.TabIndex = 21;
+            this.btnMedType.Text = "Medication Type";
+            this.btnMedType.UseVisualStyleBackColor = true;
             // 
             // frmAdminTools
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(btnMedType);
-            Controls.Add(btnMedications);
-            Controls.Add(btnCategory);
-            Controls.Add(btnBreed);
-            Controls.Add(btnAnimals);
-            Controls.Add(btnUsers);
-            Controls.Add(lblLogin);
-            Controls.Add(btnBack);
-            Name = "frmAdminTools";
-            Text = "frmAdminTools";
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnMedType);
+            this.Controls.Add(this.btnMedications);
+            this.Controls.Add(this.btnCategory);
+            this.Controls.Add(this.btnBreed);
+            this.Controls.Add(this.btnAnimals);
+            this.Controls.Add(this.btnUsers);
+            this.Controls.Add(this.lblLogin);
+            this.Controls.Add(this.btnBack);
+            this.Name = "frmAdminTools";
+            this.Text = "frmAdminTools";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion

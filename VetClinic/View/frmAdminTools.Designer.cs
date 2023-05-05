@@ -103,6 +103,7 @@
             this.btnMedications.TabIndex = 20;
             this.btnMedications.Text = "Medications";
             this.btnMedications.UseVisualStyleBackColor = true;
+            this.btnMedications.Click += new System.EventHandler(this.btnMedications_Click);
             // 
             // btnMedType
             // 
@@ -112,6 +113,7 @@
             this.btnMedType.TabIndex = 21;
             this.btnMedType.Text = "Medication Type";
             this.btnMedType.UseVisualStyleBackColor = true;
+            this.btnMedType.Click += new System.EventHandler(this.btnMedType_Click);
             // 
             // frmAdminTools
             // 

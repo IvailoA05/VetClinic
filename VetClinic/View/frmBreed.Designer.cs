@@ -32,10 +32,10 @@
             this.btnBack = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
-            this.txtPetname = new System.Windows.Forms.TextBox();
+            this.txtBreed = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgvAnimals = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAnimals)).BeginInit();
+            this.dgvBreed = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBreed)).BeginInit();
             this.SuspendLayout();
             // 
             // btnRegister
@@ -74,32 +74,32 @@
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = true;
             // 
-            // txtPetname
+            // txtBreed
             // 
-            this.txtPetname.Location = new System.Drawing.Point(901, 171);
-            this.txtPetname.Name = "txtPetname";
-            this.txtPetname.Size = new System.Drawing.Size(205, 27);
-            this.txtPetname.TabIndex = 35;
+            this.txtBreed.Location = new System.Drawing.Point(901, 171);
+            this.txtBreed.Name = "txtBreed";
+            this.txtBreed.Size = new System.Drawing.Size(205, 27);
+            this.txtBreed.TabIndex = 35;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(960, 129);
+            this.label1.Location = new System.Drawing.Point(968, 130);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 28);
             this.label1.TabIndex = 34;
             this.label1.Text = "Breed";
             // 
-            // dgvAnimals
+            // dgvBreed
             // 
-            this.dgvAnimals.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAnimals.Location = new System.Drawing.Point(36, 26);
-            this.dgvAnimals.Name = "dgvAnimals";
-            this.dgvAnimals.RowHeadersWidth = 51;
-            this.dgvAnimals.RowTemplate.Height = 29;
-            this.dgvAnimals.Size = new System.Drawing.Size(822, 284);
-            this.dgvAnimals.TabIndex = 33;
+            this.dgvBreed.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBreed.Location = new System.Drawing.Point(36, 26);
+            this.dgvBreed.Name = "dgvBreed";
+            this.dgvBreed.RowHeadersWidth = 51;
+            this.dgvBreed.RowTemplate.Height = 29;
+            this.dgvBreed.Size = new System.Drawing.Size(822, 284);
+            this.dgvBreed.TabIndex = 33;
             // 
             // frmBreed
             // 
@@ -110,12 +110,12 @@
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnEdit);
-            this.Controls.Add(this.txtPetname);
+            this.Controls.Add(this.txtBreed);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dgvAnimals);
+            this.Controls.Add(this.dgvBreed);
             this.Name = "frmBreed";
             this.Text = "frmBreed";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAnimals)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBreed)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -127,8 +127,8 @@
         private Button btnBack;
         private Button btnDelete;
         private Button btnEdit;
-        private TextBox txtPetname;
+        private TextBox txtBreed;
         private Label label1;
-        private DataGridView dgvAnimals;
+        private DataGridView dgvBreed;
     }
 }

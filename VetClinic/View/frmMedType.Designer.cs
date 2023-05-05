@@ -1,6 +1,6 @@
 ﻿namespace VetClinic.View
 {
-    partial class frmCategory
+    partial class frmMedType
     {
         /// <summary>
         /// Required designer variable.
@@ -32,15 +32,15 @@
             this.btnBack = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
-            this.txtCategory = new System.Windows.Forms.TextBox();
+            this.txtMedType = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgvCategory = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCategory)).BeginInit();
+            this.dgvMedType = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMedType)).BeginInit();
             this.SuspendLayout();
             // 
             // btnRegister
             // 
-            this.btnRegister.Location = new System.Drawing.Point(227, 424);
+            this.btnRegister.Location = new System.Drawing.Point(230, 424);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(154, 51);
             this.btnRegister.TabIndex = 47;
@@ -49,7 +49,7 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(46, 339);
+            this.btnBack.Location = new System.Drawing.Point(49, 339);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(154, 51);
             this.btnBack.TabIndex = 46;
@@ -58,7 +58,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(530, 424);
+            this.btnDelete.Location = new System.Drawing.Point(533, 424);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(154, 51);
             this.btnDelete.TabIndex = 45;
@@ -67,55 +67,55 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(714, 339);
+            this.btnEdit.Location = new System.Drawing.Point(717, 339);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(154, 51);
             this.btnEdit.TabIndex = 44;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = true;
             // 
-            // txtCategory
+            // txtMedType
             // 
-            this.txtCategory.Location = new System.Drawing.Point(911, 172);
-            this.txtCategory.Name = "txtCategory";
-            this.txtCategory.Size = new System.Drawing.Size(205, 27);
-            this.txtCategory.TabIndex = 43;
+            this.txtMedType.Location = new System.Drawing.Point(914, 172);
+            this.txtMedType.Name = "txtMedType";
+            this.txtMedType.Size = new System.Drawing.Size(205, 27);
+            this.txtMedType.TabIndex = 43;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(970, 130);
+            this.label1.Location = new System.Drawing.Point(930, 128);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 28);
+            this.label1.Size = new System.Drawing.Size(170, 28);
             this.label1.TabIndex = 42;
-            this.label1.Text = "Category";
+            this.label1.Text = "Medication Type";
             // 
-            // dgvCategory
+            // dgvMedType
             // 
-            this.dgvCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCategory.Location = new System.Drawing.Point(46, 27);
-            this.dgvCategory.Name = "dgvCategory";
-            this.dgvCategory.RowHeadersWidth = 51;
-            this.dgvCategory.RowTemplate.Height = 29;
-            this.dgvCategory.Size = new System.Drawing.Size(822, 284);
-            this.dgvCategory.TabIndex = 41;
+            this.dgvMedType.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMedType.Location = new System.Drawing.Point(49, 27);
+            this.dgvMedType.Name = "dgvMedType";
+            this.dgvMedType.RowHeadersWidth = 51;
+            this.dgvMedType.RowTemplate.Height = 29;
+            this.dgvMedType.Size = new System.Drawing.Size(822, 284);
+            this.dgvMedType.TabIndex = 41;
             // 
-            // frmCategory
+            // frmMedType
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1162, 502);
+            this.ClientSize = new System.Drawing.Size(1151, 502);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnEdit);
-            this.Controls.Add(this.txtCategory);
+            this.Controls.Add(this.txtMedType);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dgvCategory);
-            this.Name = "frmCategory";
-            this.Text = "frmCategory";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCategory)).EndInit();
+            this.Controls.Add(this.dgvMedType);
+            this.Name = "frmMedType";
+            this.Text = "frmMedType";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMedType)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -127,8 +127,8 @@
         private Button btnBack;
         private Button btnDelete;
         private Button btnEdit;
-        private TextBox txtCategory;
+        private TextBox txtMedType;
         private Label label1;
-        private DataGridView dgvCategory;
+        private DataGridView dgvMedType;
     }
 }

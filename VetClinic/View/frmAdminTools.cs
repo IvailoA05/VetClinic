@@ -55,5 +55,21 @@ namespace VetClinic.View
             category.Show();
             MessageBox.Show("You have entered into Category menu!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void btnMedications_Click(object sender, EventArgs e)
+        {
+            frmMedications medications = new frmMedications();
+            Hide();
+            medications.Show();
+            MessageBox.Show("You have entered into Medications menu!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btnMedType_Click(object sender, EventArgs e)
+        {
+            frmMedType medtype = new frmMedType();
+            Hide();
+            medtype.Show();
+            MessageBox.Show("You have entered into Medication Type menu!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

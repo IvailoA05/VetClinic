@@ -46,6 +46,7 @@
             this.btnBack.TabIndex = 14;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // lblLogin
             // 
@@ -65,6 +66,7 @@
             this.btnUsers.TabIndex = 16;
             this.btnUsers.Text = "Users";
             this.btnUsers.UseVisualStyleBackColor = true;
+            this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
             // 
             // btnAnimals
             // 
@@ -74,6 +76,7 @@
             this.btnAnimals.TabIndex = 17;
             this.btnAnimals.Text = "Animals";
             this.btnAnimals.UseVisualStyleBackColor = true;
+            this.btnAnimals.Click += new System.EventHandler(this.btnAnimals_Click);
             // 
             // btnBreed
             // 

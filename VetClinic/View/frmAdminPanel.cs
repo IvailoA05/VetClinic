@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace VetClinic.View
 {
@@ -129,6 +130,37 @@ namespace VetClinic.View
             frmMain main = new frmMain();
             Hide();
             main.Show();
+        }
+
+        private void dgvVetClinic_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvVetClinic.Rows[e.RowIndex];
+
+                int primaryKey = Convert.ToInt32(row.Cells["Id"].Value);
+                using (SqlConnection connection = new SqlConnection(Program.con))
+                {
+                    SqlCommand command = new SqlCommand("SELECT Username, Password, Address, Phone FROM [User] WHERE Id = @Id", connection);
+                    connection.Open();
+                    command.Parameters.AddWithValue("@Id", primaryKey);
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            string username = reader["Username"].ToString();
+                            string password = reader["Password"].ToString();
+                            string address = reader["Address"].ToString();
+                            string phone = reader["Phone"].ToString();
+                            txtUsername.Text = username;
+                            txtPassword.Text = password;
+                            txtAddress.Text = address;
+                            txtPhone.Text = phone;
+                            connection.Close();
+                        }
+                    }
+                }
+            }
         }
     }
 }

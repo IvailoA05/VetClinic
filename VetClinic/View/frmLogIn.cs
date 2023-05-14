@@ -57,8 +57,8 @@ namespace VetClinic.View
                         {
                             
                             this.Hide();
-                            frmAdminPanel frmAdminPanel = new frmAdminPanel();
-                            frmAdminPanel.Show();
+                            frmAdminTools frmAdminTools = new frmAdminTools();
+                            frmAdminTools.Show();
                             MessageBox.Show($"Succesfully logged in as admin as {username}!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else

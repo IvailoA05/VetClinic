@@ -54,6 +54,7 @@
             this.dgvVetClinic.RowTemplate.Height = 29;
             this.dgvVetClinic.Size = new System.Drawing.Size(822, 284);
             this.dgvVetClinic.TabIndex = 0;
+            this.dgvVetClinic.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVetClinic_CellClick);
             // 
             // label1
             // 

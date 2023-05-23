@@ -38,33 +38,6 @@ namespace VetClinic.View
             frmBreed frmBreed = new frmBreed();
             frmBreed.Show();
         }
-
-        private void dgvBreed_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow row = dgvBreed.Rows[e.RowIndex];
-
-                int primaryKey = Convert.ToInt32(row.Cells["BreedId"].Value);
-                using (SqlConnection connection = new SqlConnection(Program.con))
-                {
-                    SqlCommand command = new SqlCommand("SELECT Breed FROM [Breed] WHERE BreedId = @BreedId", connection);
-                    connection.Open();
-                    command.Parameters.AddWithValue("@BreedId", primaryKey);
-                    using (SqlDataReader reader = command.ExecuteReader())
-                    {
-                        if (reader.Read())
-                        {
-                            string Breed = reader["@Breed"].ToString();
-
-                            txtBreed.Text = Breed;
-                            connection.Close();
-                        }
-                    }
-                }
-            }
-        }
-
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (dgvBreed.SelectedRows.Count == 0)
@@ -192,6 +165,30 @@ namespace VetClinic.View
                     finally
                     {
                         con.Close();
+                    }
+                }
+            }
+        }
+        private void dgvBreed_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvBreed.Rows[e.RowIndex];
+
+                int primaryKey = Convert.ToInt32(row.Cells["BreedId"].Value);
+                using (SqlConnection connection = new SqlConnection(Program.con))
+                {
+                    SqlCommand command = new SqlCommand("SELECT Breed FROM [Breed] WHERE BreedId = @BreedId", connection);
+                    connection.Open();
+                    command.Parameters.AddWithValue("@BreedId", primaryKey);
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            string Breed = reader["@Breed"].ToString();
+                            txtBreed.Text = Breed;
+                            connection.Close();
+                        }
                     }
                 }
             }

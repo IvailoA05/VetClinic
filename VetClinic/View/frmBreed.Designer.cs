@@ -104,7 +104,7 @@
             this.dgvBreed.RowTemplate.Height = 29;
             this.dgvBreed.Size = new System.Drawing.Size(822, 284);
             this.dgvBreed.TabIndex = 33;
-            this.dgvBreed.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBreed_CellContentClick);
+            this.dgvBreed.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBreed_CellClick);
             // 
             // frmBreed
             // 

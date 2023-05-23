@@ -28,254 +28,253 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label4 = new Label();
-            btnRegister = new Button();
-            btnBack = new Button();
-            btnDelete = new Button();
-            btnEdit = new Button();
-            label2 = new Label();
-            txtPetname = new TextBox();
-            label1 = new Label();
-            dgvAnimals = new DataGridView();
-            dtpBirthday = new DateTimePicker();
-            dtpVaccdate = new DateTimePicker();
-            label5 = new Label();
-            cmbCategory = new ComboBox();
-            cmdBreed = new ComboBox();
-            label3 = new Label();
-            comboBox1 = new ComboBox();
-            label6 = new Label();
-            comboBox2 = new ComboBox();
-            label7 = new Label();
-            label8 = new Label();
-            comboBox3 = new ComboBox();
-            ((System.ComponentModel.ISupportInitialize)dgvAnimals).BeginInit();
-            SuspendLayout();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnRegister = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtPetname = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dgvAnimals = new System.Windows.Forms.DataGridView();
+            this.dtpBirthday = new System.Windows.Forms.DateTimePicker();
+            this.dtpVaccdate = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cmbCategory = new System.Windows.Forms.ComboBox();
+            this.cmbBreed = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cmbMedication = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cmbMedType = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cmbOwner = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAnimals)).BeginInit();
+            this.SuspendLayout();
             // 
             // label4
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(915, 329);
-            label4.Name = "label4";
-            label4.Size = new Size(164, 28);
-            label4.TabIndex = 29;
-            label4.Text = "VactinationDate";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(915, 264);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(164, 28);
+            this.label4.TabIndex = 29;
+            this.label4.Text = "VactinationDate";
             // 
             // btnRegister
             // 
-            btnRegister.Location = new Point(226, 426);
-            btnRegister.Name = "btnRegister";
-            btnRegister.Size = new Size(154, 51);
-            btnRegister.TabIndex = 28;
-            btnRegister.Text = "Register";
-            btnRegister.UseVisualStyleBackColor = true;
+            this.btnRegister.Location = new System.Drawing.Point(226, 426);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.Size = new System.Drawing.Size(154, 51);
+            this.btnRegister.TabIndex = 28;
+            this.btnRegister.Text = "Register";
+            this.btnRegister.UseVisualStyleBackColor = true;
             // 
             // btnBack
             // 
-            btnBack.Location = new Point(45, 341);
-            btnBack.Name = "btnBack";
-            btnBack.Size = new Size(154, 51);
-            btnBack.TabIndex = 27;
-            btnBack.Text = "Back";
-            btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Location = new System.Drawing.Point(45, 341);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(154, 51);
+            this.btnBack.TabIndex = 27;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
             // 
             // btnDelete
             // 
-            btnDelete.Location = new Point(529, 426);
-            btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(154, 51);
-            btnDelete.TabIndex = 26;
-            btnDelete.Text = "Delete";
-            btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Location = new System.Drawing.Point(529, 426);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(154, 51);
+            this.btnDelete.TabIndex = 26;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
             // 
             // btnEdit
             // 
-            btnEdit.Location = new Point(713, 341);
-            btnEdit.Name = "btnEdit";
-            btnEdit.Size = new Size(154, 51);
-            btnEdit.TabIndex = 25;
-            btnEdit.Text = "Edit";
-            btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Location = new System.Drawing.Point(713, 341);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(154, 51);
+            this.btnEdit.TabIndex = 25;
+            this.btnEdit.Text = "Edit";
+            this.btnEdit.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(1185, 91);
-            label2.Name = "label2";
-            label2.Size = new Size(94, 28);
-            label2.TabIndex = 22;
-            label2.Text = "Birthday";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(1185, 32);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(94, 28);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "Birthday";
             // 
             // txtPetname
             // 
-            txtPetname.Location = new Point(891, 122);
-            txtPetname.Name = "txtPetname";
-            txtPetname.Size = new Size(205, 27);
-            txtPetname.TabIndex = 21;
+            this.txtPetname.Location = new System.Drawing.Point(891, 63);
+            this.txtPetname.Name = "txtPetname";
+            this.txtPetname.Size = new System.Drawing.Size(205, 27);
+            this.txtPetname.TabIndex = 21;
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(939, 91);
-            label1.Name = "label1";
-            label1.Size = new Size(98, 28);
-            label1.TabIndex = 20;
-            label1.Text = "PetName";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(939, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(98, 28);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "PetName";
             // 
             // dgvAnimals
             // 
-            dgvAnimals.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvAnimals.Location = new Point(45, 29);
-            dgvAnimals.Name = "dgvAnimals";
-            dgvAnimals.RowHeadersWidth = 51;
-            dgvAnimals.RowTemplate.Height = 29;
-            dgvAnimals.Size = new Size(822, 284);
-            dgvAnimals.TabIndex = 19;
+            this.dgvAnimals.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAnimals.Location = new System.Drawing.Point(45, 29);
+            this.dgvAnimals.Name = "dgvAnimals";
+            this.dgvAnimals.RowHeadersWidth = 51;
+            this.dgvAnimals.RowTemplate.Height = 29;
+            this.dgvAnimals.Size = new System.Drawing.Size(822, 284);
+            this.dgvAnimals.TabIndex = 19;
             // 
             // dtpBirthday
             // 
-            dtpBirthday.CustomFormat = "d/M/yyyy";
-            dtpBirthday.Format = DateTimePickerFormat.Custom;
-            dtpBirthday.Location = new Point(1132, 122);
-            dtpBirthday.Name = "dtpBirthday";
-            dtpBirthday.Size = new Size(205, 27);
-            dtpBirthday.TabIndex = 31;
+            this.dtpBirthday.CustomFormat = "d/M/yyyy";
+            this.dtpBirthday.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpBirthday.Location = new System.Drawing.Point(1132, 63);
+            this.dtpBirthday.Name = "dtpBirthday";
+            this.dtpBirthday.Size = new System.Drawing.Size(205, 27);
+            this.dtpBirthday.TabIndex = 31;
             // 
             // dtpVaccdate
             // 
-            dtpVaccdate.CustomFormat = "d/M/yyyy";
-            dtpVaccdate.Format = DateTimePickerFormat.Custom;
-            dtpVaccdate.Location = new Point(891, 371);
-            dtpVaccdate.Name = "dtpVaccdate";
-            dtpVaccdate.Size = new Size(205, 27);
-            dtpVaccdate.TabIndex = 32;
+            this.dtpVaccdate.CustomFormat = "d/M/yyyy";
+            this.dtpVaccdate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpVaccdate.Location = new System.Drawing.Point(891, 306);
+            this.dtpVaccdate.Name = "dtpVaccdate";
+            this.dtpVaccdate.Size = new System.Drawing.Size(205, 27);
+            this.dtpVaccdate.TabIndex = 32;
             // 
             // label5
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(939, 163);
-            label5.Name = "label5";
-            label5.Size = new Size(98, 28);
-            label5.TabIndex = 20;
-            label5.Text = "Category";
-            label5.Click += label5_Click;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(939, 104);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(98, 28);
+            this.label5.TabIndex = 20;
+            this.label5.Text = "Category";
             // 
             // cmbCategory
             // 
-            cmbCategory.FormattingEnabled = true;
-            cmbCategory.Location = new Point(891, 194);
-            cmbCategory.Name = "cmbCategory";
-            cmbCategory.Size = new Size(205, 28);
-            cmbCategory.TabIndex = 33;
+            this.cmbCategory.FormattingEnabled = true;
+            this.cmbCategory.Location = new System.Drawing.Point(891, 135);
+            this.cmbCategory.Name = "cmbCategory";
+            this.cmbCategory.Size = new System.Drawing.Size(205, 28);
+            this.cmbCategory.TabIndex = 33;
             // 
-            // cmdBreed
+            // cmbBreed
             // 
-            cmdBreed.FormattingEnabled = true;
-            cmdBreed.Location = new Point(1132, 194);
-            cmdBreed.Name = "cmdBreed";
-            cmdBreed.Size = new Size(205, 28);
-            cmdBreed.TabIndex = 35;
+            this.cmbBreed.FormattingEnabled = true;
+            this.cmbBreed.Location = new System.Drawing.Point(1132, 135);
+            this.cmbBreed.Name = "cmbBreed";
+            this.cmbBreed.Size = new System.Drawing.Size(205, 28);
+            this.cmbBreed.TabIndex = 35;
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(1180, 163);
-            label3.Name = "label3";
-            label3.Size = new Size(67, 28);
-            label3.TabIndex = 34;
-            label3.Text = "Breed";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(1197, 104);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(67, 28);
+            this.label3.TabIndex = 34;
+            this.label3.Text = "Breed";
             // 
-            // comboBox1
+            // cmbMedication
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(1132, 275);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(205, 28);
-            comboBox1.TabIndex = 39;
+            this.cmbMedication.FormattingEnabled = true;
+            this.cmbMedication.Location = new System.Drawing.Point(1132, 216);
+            this.cmbMedication.Name = "cmbMedication";
+            this.cmbMedication.Size = new System.Drawing.Size(205, 28);
+            this.cmbMedication.TabIndex = 39;
             // 
             // label6
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.Location = new Point(1180, 244);
-            label6.Name = "label6";
-            label6.Size = new Size(119, 28);
-            label6.TabIndex = 38;
-            label6.Text = "Medication";
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(1171, 185);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(119, 28);
+            this.label6.TabIndex = 38;
+            this.label6.Text = "Medication";
             // 
-            // comboBox2
+            // cmbMedType
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(891, 275);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(205, 28);
-            comboBox2.TabIndex = 37;
+            this.cmbMedType.FormattingEnabled = true;
+            this.cmbMedType.Location = new System.Drawing.Point(891, 216);
+            this.cmbMedType.Name = "cmbMedType";
+            this.cmbMedType.Size = new System.Drawing.Size(205, 28);
+            this.cmbMedType.TabIndex = 37;
             // 
             // label7
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.Location = new Point(915, 244);
-            label7.Name = "label7";
-            label7.Size = new Size(170, 28);
-            label7.TabIndex = 36;
-            label7.Text = "Medication Type";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(909, 185);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(170, 28);
+            this.label7.TabIndex = 36;
+            this.label7.Text = "Medication Type";
             // 
             // label8
             // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.Location = new Point(939, 29);
-            label8.Name = "label8";
-            label8.Size = new Size(74, 28);
-            label8.TabIndex = 20;
-            label8.Text = "Owner";
-            label8.Click += label5_Click;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.Location = new System.Drawing.Point(1180, 274);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(74, 28);
+            this.label8.TabIndex = 20;
+            this.label8.Text = "Owner";
             // 
-            // comboBox3
+            // cmbOwner
             // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(891, 60);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(205, 28);
-            comboBox3.TabIndex = 33;
+            this.cmbOwner.FormattingEnabled = true;
+            this.cmbOwner.Location = new System.Drawing.Point(1132, 305);
+            this.cmbOwner.Name = "cmbOwner";
+            this.cmbOwner.Size = new System.Drawing.Size(205, 28);
+            this.cmbOwner.TabIndex = 33;
             // 
             // frmAnimals
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1362, 614);
-            Controls.Add(comboBox1);
-            Controls.Add(label6);
-            Controls.Add(comboBox2);
-            Controls.Add(label7);
-            Controls.Add(cmdBreed);
-            Controls.Add(label3);
-            Controls.Add(comboBox3);
-            Controls.Add(cmbCategory);
-            Controls.Add(dtpVaccdate);
-            Controls.Add(dtpBirthday);
-            Controls.Add(label4);
-            Controls.Add(btnRegister);
-            Controls.Add(btnBack);
-            Controls.Add(btnDelete);
-            Controls.Add(btnEdit);
-            Controls.Add(label8);
-            Controls.Add(label2);
-            Controls.Add(label5);
-            Controls.Add(txtPetname);
-            Controls.Add(label1);
-            Controls.Add(dgvAnimals);
-            Name = "frmAnimals";
-            Text = "frmAnimals";
-            ((System.ComponentModel.ISupportInitialize)dgvAnimals).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1362, 499);
+            this.Controls.Add(this.cmbMedication);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.cmbMedType);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.cmbBreed);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.cmbOwner);
+            this.Controls.Add(this.cmbCategory);
+            this.Controls.Add(this.dtpVaccdate);
+            this.Controls.Add(this.dtpBirthday);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.btnRegister);
+            this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnEdit);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtPetname);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dgvAnimals);
+            this.Name = "frmAnimals";
+            this.Text = "frmAnimals";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAnimals)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
@@ -298,12 +297,12 @@
         private DateTimePicker dtpVaccdate;
         private Label label5;
         private ComboBox cmbCategory;
-        private ComboBox cmdBreed;
-        private ComboBox comboBox1;
+        private ComboBox cmbBreed;
+        private ComboBox cmbMedication;
         private Label label6;
-        private ComboBox comboBox2;
+        private ComboBox cmbMedType;
         private Label label7;
         private Label label8;
-        private ComboBox comboBox3;
+        private ComboBox cmbOwner;
     }
 }

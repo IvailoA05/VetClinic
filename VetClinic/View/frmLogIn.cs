@@ -74,9 +74,7 @@ namespace VetClinic.View
                         MessageBox.Show("Invalid credentials!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-            }
-            
-            
+            }   
         }
     }
 }

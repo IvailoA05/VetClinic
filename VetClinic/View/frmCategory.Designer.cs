@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnRegister = new System.Windows.Forms.Button();
+            this.btnCreate = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
@@ -38,14 +38,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategory)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnRegister
+            // btnCreate
             // 
-            this.btnRegister.Location = new System.Drawing.Point(227, 424);
-            this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(154, 51);
-            this.btnRegister.TabIndex = 47;
-            this.btnRegister.Text = "Register";
-            this.btnRegister.UseVisualStyleBackColor = true;
+            this.btnCreate.Location = new System.Drawing.Point(227, 424);
+            this.btnCreate.Name = "btnCreate";
+            this.btnCreate.Size = new System.Drawing.Size(154, 51);
+            this.btnCreate.TabIndex = 47;
+            this.btnCreate.Text = "Create";
+            this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // btnBack
             // 
@@ -55,6 +56,7 @@
             this.btnBack.TabIndex = 46;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnDelete
             // 
@@ -64,6 +66,7 @@
             this.btnDelete.TabIndex = 45;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnEdit
             // 
@@ -73,6 +76,7 @@
             this.btnEdit.TabIndex = 44;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // txtCategory
             // 
@@ -100,13 +104,14 @@
             this.dgvCategory.RowTemplate.Height = 29;
             this.dgvCategory.Size = new System.Drawing.Size(822, 284);
             this.dgvCategory.TabIndex = 41;
+            this.dgvCategory.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCategory_CellClick);
             // 
             // frmCategory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1162, 502);
-            this.Controls.Add(this.btnRegister);
+            this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnEdit);
@@ -123,7 +128,7 @@
 
         #endregion
 
-        private Button btnRegister;
+        private Button btnCreate;
         private Button btnBack;
         private Button btnDelete;
         private Button btnEdit;

@@ -116,7 +116,7 @@ namespace VetClinic.View
 
             if (string.IsNullOrEmpty(Category))
             {
-                MessageBox.Show("Please enter Category name");
+                MessageBox.Show("Please enter Category name!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -129,13 +129,14 @@ namespace VetClinic.View
                 using (SqlCommand insertCommand = new SqlCommand(insertSql, con))
                 {
                     selectCommand.Parameters.AddWithValue("@Category", Category);
+                    insertCommand.Parameters.AddWithValue("@Category", Category);
                     try
                     {
                         con.Open();
                         int count = (int)selectCommand.ExecuteScalar();
                         if (count > 0)
                         {
-                            MessageBox.Show($"Category {Category} already exists. Please choose a different Category.");
+                            MessageBox.Show($"Category {Category} already exists. Please choose a different Category.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                         else
                         {
@@ -143,10 +144,11 @@ namespace VetClinic.View
                             if (result > 0)
                             {
                                 dgvReset();
+                                MessageBox.Show($"Successfully added a category {Category}!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                             else
                             {
-                                MessageBox.Show("Creation failed. Please try again.");
+                                MessageBox.Show("Creation failed. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }
                     }
@@ -171,7 +173,7 @@ namespace VetClinic.View
 
         private void dgvCategory_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
+            if (dgvCategory.Rows.Count < e.RowIndex -1)
             {
                 DataGridViewRow row = dgvCategory.Rows[e.RowIndex];
 

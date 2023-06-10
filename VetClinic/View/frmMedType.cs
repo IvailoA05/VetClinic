@@ -4,10 +4,12 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VetClinic.View;
 
 namespace VetClinic.View
 {
@@ -16,6 +18,18 @@ namespace VetClinic.View
         public frmMedType()
         {
             InitializeComponent();
+            DataTable dt = new DataTable();
+            using (SqlConnection con = new SqlConnection(Program.con))
+            {
+                using (SqlCommand cmd = new SqlCommand("SELECT MedTypesId, Type FROM [MedicationTypes]", con))
+                {
+                    using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
+                    {
+                        sda.Fill(dt);
+                    }
+                }
+            }
+            dgvMedType.DataSource = dt;
         }
         private void dgvReset()
         {
@@ -30,7 +44,6 @@ namespace VetClinic.View
             Hide();
             main.Show();
         }
-
         private void btnCreate_Click(object sender, EventArgs e)
         {
             string MedType = txtMedType.Text;
@@ -84,7 +97,6 @@ namespace VetClinic.View
                 }
             }
         }
-
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (dgvMedType.SelectedRows.Count == 0)
@@ -109,7 +121,6 @@ namespace VetClinic.View
                 con.Close();
             }
         }
-
         private void btnEdit_Click(object sender, EventArgs e)
         {
             if (dgvMedType.SelectedRows.Count == 0)
@@ -184,4 +195,5 @@ namespace VetClinic.View
         }
     }
 }
-    
+
+

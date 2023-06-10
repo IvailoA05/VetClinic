@@ -28,102 +28,113 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnRegister = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
-            this.txtMedType = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dgvMedType = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMedType)).BeginInit();
-            this.SuspendLayout();
+            btnCreate = new Button();
+            btnBack = new Button();
+            btnDelete = new Button();
+            btnEdit = new Button();
+            txtMedType = new TextBox();
+            label1 = new Label();
+            dgvMedType = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dgvMedType).BeginInit();
+            SuspendLayout();
             // 
-            // btnRegister
+            // btnCreate
             // 
-            this.btnRegister.Location = new System.Drawing.Point(230, 424);
-            this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(154, 51);
-            this.btnRegister.TabIndex = 47;
-            this.btnRegister.Text = "Register";
-            this.btnRegister.UseVisualStyleBackColor = true;
+            btnCreate.Location = new Point(201, 318);
+            btnCreate.Margin = new Padding(3, 2, 3, 2);
+            btnCreate.Name = "btnCreate";
+            btnCreate.Size = new Size(135, 38);
+            btnCreate.TabIndex = 47;
+            btnCreate.Text = "Create";
+            btnCreate.UseVisualStyleBackColor = true;
+            btnCreate.Click += btnCreate_Click;
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(49, 339);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(154, 51);
-            this.btnBack.TabIndex = 46;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
+            btnBack.Location = new Point(43, 254);
+            btnBack.Margin = new Padding(3, 2, 3, 2);
+            btnBack.Name = "btnBack";
+            btnBack.Size = new Size(135, 38);
+            btnBack.TabIndex = 46;
+            btnBack.Text = "Back";
+            btnBack.UseVisualStyleBackColor = true;
+            btnBack.Click += btnBack_Click;
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(533, 424);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(154, 51);
-            this.btnDelete.TabIndex = 45;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Location = new Point(466, 318);
+            btnDelete.Margin = new Padding(3, 2, 3, 2);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(135, 38);
+            btnDelete.TabIndex = 45;
+            btnDelete.Text = "Delete";
+            btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click;
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(717, 339);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(154, 51);
-            this.btnEdit.TabIndex = 44;
-            this.btnEdit.Text = "Edit";
-            this.btnEdit.UseVisualStyleBackColor = true;
+            btnEdit.Location = new Point(627, 254);
+            btnEdit.Margin = new Padding(3, 2, 3, 2);
+            btnEdit.Name = "btnEdit";
+            btnEdit.Size = new Size(135, 38);
+            btnEdit.TabIndex = 44;
+            btnEdit.Text = "Edit";
+            btnEdit.UseVisualStyleBackColor = true;
+            btnEdit.Click += btnEdit_Click;
             // 
             // txtMedType
             // 
-            this.txtMedType.Location = new System.Drawing.Point(914, 172);
-            this.txtMedType.Name = "txtMedType";
-            this.txtMedType.Size = new System.Drawing.Size(205, 27);
-            this.txtMedType.TabIndex = 43;
+            txtMedType.Location = new Point(800, 129);
+            txtMedType.Margin = new Padding(3, 2, 3, 2);
+            txtMedType.Name = "txtMedType";
+            txtMedType.Size = new Size(180, 23);
+            txtMedType.TabIndex = 43;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(930, 128);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(170, 28);
-            this.label1.TabIndex = 42;
-            this.label1.Text = "Medication Type";
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(814, 96);
+            label1.Name = "label1";
+            label1.Size = new Size(137, 21);
+            label1.TabIndex = 42;
+            label1.Text = "Medication Type";
             // 
             // dgvMedType
             // 
-            this.dgvMedType.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMedType.Location = new System.Drawing.Point(49, 27);
-            this.dgvMedType.Name = "dgvMedType";
-            this.dgvMedType.RowHeadersWidth = 51;
-            this.dgvMedType.RowTemplate.Height = 29;
-            this.dgvMedType.Size = new System.Drawing.Size(822, 284);
-            this.dgvMedType.TabIndex = 41;
+            dgvMedType.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvMedType.Location = new Point(43, 20);
+            dgvMedType.Margin = new Padding(3, 2, 3, 2);
+            dgvMedType.Name = "dgvMedType";
+            dgvMedType.RowHeadersWidth = 51;
+            dgvMedType.RowTemplate.Height = 29;
+            dgvMedType.Size = new Size(719, 213);
+            dgvMedType.TabIndex = 41;
+            dgvMedType.CellClick += dgvMedType_CellClick;
             // 
             // frmMedType
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1151, 502);
-            this.Controls.Add(this.btnRegister);
-            this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnEdit);
-            this.Controls.Add(this.txtMedType);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.dgvMedType);
-            this.Name = "frmMedType";
-            this.Text = "frmMedType";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMedType)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1007, 376);
+            Controls.Add(btnCreate);
+            Controls.Add(btnBack);
+            Controls.Add(btnDelete);
+            Controls.Add(btnEdit);
+            Controls.Add(txtMedType);
+            Controls.Add(label1);
+            Controls.Add(dgvMedType);
+            Margin = new Padding(3, 2, 3, 2);
+            Name = "frmMedType";
+            Text = "frmMedType";
+            ((System.ComponentModel.ISupportInitialize)dgvMedType).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private Button btnRegister;
+        private Button btnCreate;
         private Button btnBack;
         private Button btnDelete;
         private Button btnEdit;

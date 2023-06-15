@@ -143,6 +143,9 @@ namespace VetClinic.View
         {
             string Breed = txtBreed.Text;
 
+            ComboBoxCategory selectedCategory = (ComboBoxCategory)cmbCategory.SelectedItem;
+            int CategoryID = selectedCategory.CategoryId;
+
             if (string.IsNullOrEmpty(Breed))
             {
                 MessageBox.Show("Please enter breed name");
@@ -152,7 +155,7 @@ namespace VetClinic.View
             using (SqlConnection con = new SqlConnection(Program.con))
             {
                 string selectSql = "SELECT COUNT(*) FROM [Breed] WHERE Breed = @Breed";
-                string insertSql = "INSERT INTO [Breed] (Breed) VALUES (@Breed)";
+                string insertSql = "INSERT INTO [Breed] (Breed, CategoryId) VALUES (@Breed, @CategoryId)";
 
                 using (SqlCommand selectCommand = new SqlCommand(selectSql, con))
                 using (SqlCommand insertCommand = new SqlCommand(insertSql, con))
@@ -168,6 +171,8 @@ namespace VetClinic.View
                         }
                         else
                         {
+                            insertCommand.Parameters.AddWithValue("@Breed", Breed);
+                            insertCommand.Parameters.AddWithValue("@CategoryId", CategoryID);
                             int result = insertCommand.ExecuteNonQuery();
                             if (result > 0)
                             {

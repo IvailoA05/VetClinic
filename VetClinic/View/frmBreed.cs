@@ -35,7 +35,7 @@ namespace VetClinic.View
             {
                 con.Open();
 
-                string sql = "SELECT VesselId, InternationalNumber FROM [Vessel]";
+                string sql = "SELECT CategoryId, Category FROM [Category]";
 
                 using (SqlCommand command = new SqlCommand(sql, con))
                 {

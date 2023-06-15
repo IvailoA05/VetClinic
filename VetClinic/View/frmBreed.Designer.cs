@@ -28,102 +28,123 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnCreate = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
-            this.txtBreed = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dgvBreed = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBreed)).BeginInit();
-            this.SuspendLayout();
+            btnCreate = new Button();
+            btnBack = new Button();
+            btnDelete = new Button();
+            btnEdit = new Button();
+            txtBreed = new TextBox();
+            label1 = new Label();
+            dgvBreed = new DataGridView();
+            cmbCategory = new ComboBox();
+            label2 = new Label();
+            ((System.ComponentModel.ISupportInitialize)dgvBreed).BeginInit();
+            SuspendLayout();
             // 
             // btnCreate
             // 
-            this.btnCreate.Location = new System.Drawing.Point(217, 423);
-            this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(154, 51);
-            this.btnCreate.TabIndex = 40;
-            this.btnCreate.Text = "Create";
-            this.btnCreate.UseVisualStyleBackColor = true;
-            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
+            btnCreate.Location = new Point(217, 423);
+            btnCreate.Name = "btnCreate";
+            btnCreate.Size = new Size(154, 51);
+            btnCreate.TabIndex = 40;
+            btnCreate.Text = "Create";
+            btnCreate.UseVisualStyleBackColor = true;
+            btnCreate.Click += btnCreate_Click;
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(36, 338);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(154, 51);
-            this.btnBack.TabIndex = 39;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            btnBack.Location = new Point(36, 338);
+            btnBack.Name = "btnBack";
+            btnBack.Size = new Size(154, 51);
+            btnBack.TabIndex = 39;
+            btnBack.Text = "Back";
+            btnBack.UseVisualStyleBackColor = true;
+            btnBack.Click += btnBack_Click;
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(520, 423);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(154, 51);
-            this.btnDelete.TabIndex = 38;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            btnDelete.Location = new Point(520, 423);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(154, 51);
+            btnDelete.TabIndex = 38;
+            btnDelete.Text = "Delete";
+            btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click;
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(704, 338);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(154, 51);
-            this.btnEdit.TabIndex = 37;
-            this.btnEdit.Text = "Edit";
-            this.btnEdit.UseVisualStyleBackColor = true;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            btnEdit.Location = new Point(704, 338);
+            btnEdit.Name = "btnEdit";
+            btnEdit.Size = new Size(154, 51);
+            btnEdit.TabIndex = 37;
+            btnEdit.Text = "Edit";
+            btnEdit.UseVisualStyleBackColor = true;
+            btnEdit.Click += btnEdit_Click;
             // 
             // txtBreed
             // 
-            this.txtBreed.Location = new System.Drawing.Point(901, 171);
-            this.txtBreed.Name = "txtBreed";
-            this.txtBreed.Size = new System.Drawing.Size(205, 27);
-            this.txtBreed.TabIndex = 35;
+            txtBreed.Location = new Point(901, 129);
+            txtBreed.Name = "txtBreed";
+            txtBreed.Size = new Size(205, 27);
+            txtBreed.TabIndex = 35;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(968, 130);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 28);
-            this.label1.TabIndex = 34;
-            this.label1.Text = "Breed";
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(968, 88);
+            label1.Name = "label1";
+            label1.Size = new Size(67, 28);
+            label1.TabIndex = 34;
+            label1.Text = "Breed";
             // 
             // dgvBreed
             // 
-            this.dgvBreed.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBreed.Location = new System.Drawing.Point(36, 26);
-            this.dgvBreed.Name = "dgvBreed";
-            this.dgvBreed.RowHeadersWidth = 51;
-            this.dgvBreed.RowTemplate.Height = 29;
-            this.dgvBreed.Size = new System.Drawing.Size(822, 284);
-            this.dgvBreed.TabIndex = 33;
-            this.dgvBreed.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBreed_CellClick);
+            dgvBreed.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvBreed.Location = new Point(36, 26);
+            dgvBreed.Name = "dgvBreed";
+            dgvBreed.RowHeadersWidth = 51;
+            dgvBreed.RowTemplate.Height = 29;
+            dgvBreed.Size = new Size(822, 284);
+            dgvBreed.TabIndex = 33;
+            dgvBreed.CellClick += dgvBreed_CellClick;
+            // 
+            // cmbCategory
+            // 
+            cmbCategory.FormattingEnabled = true;
+            cmbCategory.Location = new Point(901, 232);
+            cmbCategory.Name = "cmbCategory";
+            cmbCategory.Size = new Size(205, 28);
+            cmbCategory.TabIndex = 41;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Location = new Point(952, 185);
+            label2.Name = "label2";
+            label2.Size = new Size(98, 28);
+            label2.TabIndex = 42;
+            label2.Text = "Category";
             // 
             // frmBreed
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1151, 526);
-            this.Controls.Add(this.btnCreate);
-            this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnEdit);
-            this.Controls.Add(this.txtBreed);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.dgvBreed);
-            this.Name = "frmBreed";
-            this.Text = "frmBreed";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBreed)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1151, 526);
+            Controls.Add(label2);
+            Controls.Add(cmbCategory);
+            Controls.Add(btnCreate);
+            Controls.Add(btnBack);
+            Controls.Add(btnDelete);
+            Controls.Add(btnEdit);
+            Controls.Add(txtBreed);
+            Controls.Add(label1);
+            Controls.Add(dgvBreed);
+            Name = "frmBreed";
+            Text = "frmBreed";
+            ((System.ComponentModel.ISupportInitialize)dgvBreed).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -135,5 +156,7 @@
         private TextBox txtBreed;
         private Label label1;
         private DataGridView dgvBreed;
+        private ComboBox cmbCategory;
+        private Label label2;
     }
 }

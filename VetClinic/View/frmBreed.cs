@@ -30,6 +30,27 @@ namespace VetClinic.View
                 }
             }
             dgvBreed.DataSource = dt;
+
+            using (SqlConnection con = new SqlConnection(Program.con))
+            {
+                con.Open();
+
+                string sql = "SELECT VesselId, InternationalNumber FROM [Vessel]";
+
+                using (SqlCommand command = new SqlCommand(sql, con))
+                {
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            int CategoryId = reader.GetInt32(0);
+                            string Category = reader.GetString(1);
+
+                            cmbCategory.Items.Add(new ComboBoxCategory(Category, CategoryId));
+                        }
+                    }
+                }
+            }
         }
 
         private void dgvReset()
@@ -191,6 +212,23 @@ namespace VetClinic.View
                         }
                     }
                 }
+            }
+        }
+
+        public class ComboBoxCategory
+        {
+            public int CategoryId { get; set; }
+            public string Category { get; set; }
+
+            public ComboBoxCategory(string category, int categoryId)
+            {
+                Category = category;
+                CategoryId = categoryId;
+            }
+
+            public override string ToString()
+            {
+                return Category;
             }
         }
     }

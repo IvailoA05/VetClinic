@@ -21,7 +21,7 @@ namespace VetClinic.View
             DataTable dt = new DataTable();
             using (SqlConnection con = new SqlConnection(Program.con))
             {
-                using (SqlCommand cmd = new SqlCommand("SELECT BreedId, Breed FROM [Breed]", con))
+                using (SqlCommand cmd = new SqlCommand("SELECT BreedId, Breed, Category FROM [Breed, Category] WHERE Breed.CategoryId = Category.CategoryId", con))
                 {
                     using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
                     {
@@ -117,11 +117,14 @@ namespace VetClinic.View
 
             using (SqlConnection con = new SqlConnection(Program.con))
             {
+                ComboBoxCategory selectedCategory = (ComboBoxCategory)cmbCategory.SelectedItem;
+                int CategoryID = selectedCategory.CategoryId;
                 con.Open();
 
-                SqlCommand updateCommand = new SqlCommand("UPDATE [Breed] SET Breed = @Breed WHERE BreedId = @BreedId", con);
+                SqlCommand updateCommand = new SqlCommand("UPDATE [Breed] SET Breed = @Breed, CategoryId = @CategoryId WHERE BreedId = @BreedId", con);
                 updateCommand.Parameters.AddWithValue("@Breed", newBreed);
                 updateCommand.Parameters.AddWithValue("@BreedId", Id);
+                updateCommand.Parameters.AddWithValue("@CategoryId", CategoryID);
                 updateCommand.ExecuteNonQuery();
 
                 con.Close();

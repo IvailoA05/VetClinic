@@ -192,7 +192,7 @@ namespace VetClinic.View
         }
         private void dgvBreed_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
+            if (dgvBreed.Rows.Count < e.RowIndex - 1)
             {
                 DataGridViewRow row = dgvBreed.Rows[e.RowIndex];
 

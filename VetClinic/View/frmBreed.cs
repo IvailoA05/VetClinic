@@ -21,7 +21,7 @@ namespace VetClinic.View
             DataTable dt = new DataTable();
             using (SqlConnection con = new SqlConnection(Program.con))
             {
-                using (SqlCommand cmd = new SqlCommand("SELECT BreedId, Breed, Category FROM [Breed, Category] WHERE Breed.CategoryId = Category.CategoryId", con))
+                using (SqlCommand cmd = new SqlCommand("SELECT BreedId, Breed, Category FROM Breed INNER JOIN Category ON Breed.CategoryId = Category.CategoryId", con))
                 {
                     using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
                     {
@@ -200,23 +200,41 @@ namespace VetClinic.View
         }
         private void dgvBreed_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgvBreed.Rows.Count < e.RowIndex - 1)
+            //Islast row then You Can Insert new record
+            if (e.RowIndex == dgvBreed.Rows.Count - 1)
+            {
+                txtBreed.Text = "";
+                cmbCategory.SelectedIndex = 0;
+            }
+            else
             {
                 DataGridViewRow row = dgvBreed.Rows[e.RowIndex];
-
                 int primaryKey = Convert.ToInt32(row.Cells["BreedId"].Value);
                 using (SqlConnection connection = new SqlConnection(Program.con))
                 {
-                    SqlCommand command = new SqlCommand("SELECT Breed FROM [Breed] WHERE BreedId = @BreedId", connection);
+                    SqlCommand command = new SqlCommand("SELECT Breed, CategoryID FROM [Breed] WHERE BreedId = @BreedId", connection);
                     connection.Open();
                     command.Parameters.AddWithValue("@BreedId", primaryKey);
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
                         if (reader.Read())
                         {
-                            string Breed = reader["@Breed"].ToString();
-                            txtBreed.Text = Breed;
+                            string BreedName = reader["Breed"].ToString();
+                            string CategoryID = reader["CategoryID"].ToString();
+
+                            txtBreed.Text = BreedName;
                             connection.Close();
+
+                            for (int i = 0; i < cmbCategory.Items.Count; i++)
+                            {
+                                ComboBoxCategory selectedCategory = (ComboBoxCategory)cmbCategory.Items[i];
+                                if (CategoryID == selectedCategory.CategoryId.ToString())
+                                {
+                                    cmbCategory.SelectedIndex = i;
+                                    break;
+                                }
+
+                            }
                         }
                     }
                 }

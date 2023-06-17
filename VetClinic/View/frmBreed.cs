@@ -180,6 +180,7 @@ namespace VetClinic.View
                             if (result > 0)
                             {
                                 dgvReset();
+                                MessageBox.Show("The Breed has been created successfully!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                             else
                             {

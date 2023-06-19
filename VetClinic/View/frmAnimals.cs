@@ -22,7 +22,7 @@ namespace VetClinic.View
             DataTable dt = new DataTable();
             using (SqlConnection con = new SqlConnection(Program.con))
             {
-                using (SqlCommand cmd = new SqlCommand("SELECT AnimalId, PetName, Birthday, Category, Breed, Username, Type, MedicationName, VaccinationDate FROM Animals INNER JOIN User ON Animals.OwnerId = User.Id INNER JOIN Breed ON Animals.IDBreed = Breed.BreedId INNER JOIN Medications ON Animals.Vaccines = Medications.MedicationId INNER JOIN Category ON Animals.CategoryId = Category.CategoryId INNER JOIN MedicationTypes ON Animals.MedTypeId = MedicationTypes.MedTypesId", con))
+                using (SqlCommand cmd = new SqlCommand("SELECT AnimalId, PetName, Birthday, Category, Breed, Username, Type, MedicationName, VaccinationDate FROM Animals INNER JOIN [User] ON Animals.OwnerId = [User].Id INNER JOIN Breed ON Animals.IDBreed = Breed.BreedId INNER JOIN Medications ON Animals.Vaccines = Medications.MedicationId INNER JOIN Category ON Animals.CategoryId = Category.CategoryId INNER JOIN MedicationTypes ON Animals.MedTypeId = MedicationTypes.MedTypesId", con))
                 {
                     using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
                     {
@@ -47,7 +47,7 @@ namespace VetClinic.View
                             int MedicationId = reader.GetInt32(0);
                             string MedicationName = reader.GetString(1);
 
-                            cmbMedType.Items.Add(new ComboBoxMedication(MedicationName, MedicationId));
+                            cmbMedication.Items.Add(new ComboBoxMedication(MedicationName, MedicationId));
                         }
                     }
                 }
@@ -200,7 +200,7 @@ namespace VetClinic.View
             using (SqlConnection con = new SqlConnection(Program.con))
             {
                 ComboBoxMedType selectedMedType = (ComboBoxMedType)cmbMedType.SelectedItem;
-                int MedTypeID = selectedMedType.MedTypeId;
+                int MedTypeID = selectedMedType.MedicationTypesId;
                 con.Open();
 
                 SqlCommand updateCommand = new SqlCommand("UPDATE [Animals] SET PetName = @PetName, VaccinationDate = @VaccinationDate, MedTypeId = @MedTypeId WHERE AnimalId = @AnimalId", con);
@@ -215,7 +215,7 @@ namespace VetClinic.View
             using (SqlConnection con = new SqlConnection(Program.con))
             {
                 ComboBoxMedication selectedMedication = (ComboBoxMedication)cmbMedication.SelectedItem;
-                int MedicationID = selectedMedication.Vaccines;
+                int MedicationID = selectedMedication.MedicationId;
                 con.Open();
 
                 SqlCommand updateCommand = new SqlCommand("UPDATE [Animals] SET PetName = @PetName, VaccinationDate = @VaccinationDate, Vaccines = @Vaccines WHERE AnimalId = @AnimalId", con);
@@ -230,7 +230,7 @@ namespace VetClinic.View
             using (SqlConnection con = new SqlConnection(Program.con))
             {
                 ComboBoxBreed selectedBreed = (ComboBoxBreed)cmbBreed.SelectedItem;
-                int IDBreed = selectedBreed.IdBreed;
+                int IDBreed = selectedBreed.BreedId;
                 con.Open();
 
                 SqlCommand updateCommand = new SqlCommand("UPDATE [Animals] SET PetName = @PetName, VaccinationDate = @VaccinationDate, IdBreed = @IdBreed WHERE AnimalId = @AnimalId", con);
@@ -252,7 +252,7 @@ namespace VetClinic.View
                 updateCommand.Parameters.AddWithValue("@PetName", newAnimal);
                 updateCommand.Parameters.AddWithValue("@VaccinationDate", newVaccinationDate);
                 updateCommand.Parameters.AddWithValue("@AnimalId", Id);
-                updateCommand.Parameters.AddWithValue("@CateogryId", CategoryID);
+                updateCommand.Parameters.AddWithValue("@CategoryId", CategoryID);
                 updateCommand.ExecuteNonQuery();
 
                 con.Close();
@@ -260,7 +260,7 @@ namespace VetClinic.View
             using (SqlConnection con = new SqlConnection(Program.con))
             {
                 ComboBoxUser selectedOwner = (ComboBoxUser)cmbOwner.SelectedItem;
-                int OwnerID = selectedOwner.OwnerId;
+                int OwnerID = selectedOwner.Id;
                 con.Open();
 
                 SqlCommand updateCommand = new SqlCommand("UPDATE [Animals] SET PetName = @PetName, VaccinationDate = @VaccinationDate, OwnerId = @OwnerId WHERE AnimalId = @AnimalId", con);
@@ -274,7 +274,7 @@ namespace VetClinic.View
             }
 
             dgvReset();
-            MessageBox.Show("The Medication has been edited successfully!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("The Animal has been edited successfully!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         private void btnBack_Click(object sender, EventArgs e)
         {
@@ -290,16 +290,16 @@ namespace VetClinic.View
             int CategoryID = selectedCategory.CategoryId;
 
             ComboBoxMedType selectedMedType = (ComboBoxMedType)cmbMedType.SelectedItem;
-            int MedTypeID = selectedMedType.MedTypeId;
+            int MedTypeID = selectedMedType.MedicationTypesId;
 
             ComboBoxMedication selectedMedication = (ComboBoxMedication)cmbMedication.SelectedItem;
-            int MedicationID = selectedMedication.Vaccines;
+            int MedicationID = selectedMedication.MedicationId;
 
             ComboBoxBreed selectedBreed = (ComboBoxBreed)cmbBreed.SelectedItem;
-            int IDBreed = selectedBreed.IdBreed;
+            int IDBreed = selectedBreed.BreedId;
 
             ComboBoxUser selectedOwner = (ComboBoxUser)cmbOwner.SelectedItem;
-            int OwnerID = selectedOwner.OwnerId;
+            int OwnerID = selectedOwner.Id;
 
             DateTime VaccinationDate = dtpVaccdate.Value;
             DateTime Birthday = dtpBirthday.Value;
@@ -313,7 +313,7 @@ namespace VetClinic.View
             using (SqlConnection con = new SqlConnection(Program.con))
             {
                 string selectSql = "SELECT COUNT(*) FROM [Animals] WHERE PetName = @PetName";
-                string insertSql = "INSERT INTO [Animals] (PetName, CategoryId, MedTypeId, Vaccines, IdBreed, OwnerId, VaccinationDate, Birthday) VALUES (@Breed, @CategoryId, @MedTypeId, @Vaccines, @IdBreed, @OwnerId, @VaccinationDate, @Birthday)";
+                string insertSql = "INSERT INTO [Animals] (PetName, CategoryId, MedTypeId, Vaccines, IdBreed, OwnerId, VaccinationDate, Birthday) VALUES (@PetName, @CategoryId, @MedTypeId, @Vaccines, @IdBreed, @OwnerId, @VaccinationDate, @Birthday)";
 
                 using (SqlCommand selectCommand = new SqlCommand(selectSql, con))
                 using (SqlCommand insertCommand = new SqlCommand(insertSql, con))
@@ -366,11 +366,11 @@ namespace VetClinic.View
             if (e.RowIndex == dgvAnimals.Rows.Count - 1)
             {
                 txtPetname.Text = "";
-                cmbCategory.SelectedIndex = 0;
-                cmbBreed.SelectedIndex = 0;
-                cmbMedication.SelectedIndex = 0;
-                cmbMedType.SelectedIndex = 0;
-                cmbOwner.SelectedIndex = 0;
+                cmbCategory.SelectedIndex = cmbCategory.Items.Count > 0 ? 0 : -1;
+                cmbBreed.SelectedIndex = cmbBreed.Items.Count > 0 ? 0 : -1;
+                cmbMedication.SelectedIndex = cmbMedication.Items.Count > 0 ? 0 : -1;
+                cmbMedType.SelectedIndex = cmbMedType.Items.Count > 0 ? 0 : -1;
+                cmbOwner.SelectedIndex = cmbOwner.Items.Count > 0 ? 0 : -1;
                 dtpVaccdate.Value = new DateTime(2023, 6, 17);
                 dtpBirthday.Value = new DateTime(2023, 6, 17);
             }
@@ -410,7 +410,7 @@ namespace VetClinic.View
                             for (int i = 0; i < cmbBreed.Items.Count; i++)
                             {
                                 ComboBoxBreed selectedBreed = (ComboBoxBreed)cmbBreed.Items[i];
-                                if (IDBreed == selectedBreed.IdBreed.ToString())
+                                if (IDBreed == selectedBreed.BreedId.ToString())
                                 {
                                     cmbBreed.SelectedIndex = i;
                                     break;
@@ -420,7 +420,7 @@ namespace VetClinic.View
                             for (int i = 0; i < cmbMedication.Items.Count; i++)
                             {
                                 ComboBoxMedication selectedMedication = (ComboBoxMedication)cmbMedication.Items[i];
-                                if (MedicationID == selectedMedication.Vaccines.ToString())
+                                if (MedicationID == selectedMedication.MedicationId.ToString())
                                 {
                                     cmbMedication.SelectedIndex = i;
                                     break;
@@ -430,7 +430,7 @@ namespace VetClinic.View
                             for (int i = 0; i < cmbMedType.Items.Count; i++)
                             {
                                 ComboBoxMedType selectedMedType = (ComboBoxMedType)cmbMedType.Items[i];
-                                if (MedTypeID == selectedMedType.MedTypeId.ToString())
+                                if (MedTypeID == selectedMedType.MedicationTypesId.ToString())
                                 {
                                     cmbMedType.SelectedIndex = i;
                                     break;
@@ -439,7 +439,7 @@ namespace VetClinic.View
                             for (int i = 0; i < cmbOwner.Items.Count; i++)
                             {
                                 ComboBoxUser selectedOwner = (ComboBoxUser)cmbOwner.Items[i];
-                                if (OwnerID == selectedOwner.OwnerId.ToString())
+                                if (OwnerID == selectedOwner.Id.ToString())
                                 {
                                     cmbOwner.SelectedIndex = i;
                                     break;

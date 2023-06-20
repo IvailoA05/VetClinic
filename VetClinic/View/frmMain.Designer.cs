@@ -28,47 +28,87 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnLogOut = new System.Windows.Forms.Button();
-            this.btnAdminTools = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            btnLogOut = new Button();
+            btnAdminTools = new Button();
+            dgvPet = new DataGridView();
+            cmbPet = new ComboBox();
+            label5 = new Label();
+            ((System.ComponentModel.ISupportInitialize)dgvPet).BeginInit();
+            SuspendLayout();
             // 
             // btnLogOut
             // 
-            this.btnLogOut.Location = new System.Drawing.Point(683, 12);
-            this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(105, 38);
-            this.btnLogOut.TabIndex = 0;
-            this.btnLogOut.Text = "Log Out";
-            this.btnLogOut.UseVisualStyleBackColor = true;
-            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
+            btnLogOut.Location = new Point(787, 12);
+            btnLogOut.Name = "btnLogOut";
+            btnLogOut.Size = new Size(105, 38);
+            btnLogOut.TabIndex = 0;
+            btnLogOut.Text = "Log Out";
+            btnLogOut.UseVisualStyleBackColor = true;
+            btnLogOut.Click += btnLogOut_Click;
             // 
             // btnAdminTools
             // 
-            this.btnAdminTools.Location = new System.Drawing.Point(12, 12);
-            this.btnAdminTools.Name = "btnAdminTools";
-            this.btnAdminTools.Size = new System.Drawing.Size(105, 38);
-            this.btnAdminTools.TabIndex = 1;
-            this.btnAdminTools.Text = "Admin Tools";
-            this.btnAdminTools.UseVisualStyleBackColor = true;
-            this.btnAdminTools.Visible = false;
-            this.btnAdminTools.Click += new System.EventHandler(this.btnAdminTools_Click);
+            btnAdminTools.Location = new Point(12, 12);
+            btnAdminTools.Name = "btnAdminTools";
+            btnAdminTools.Size = new Size(105, 38);
+            btnAdminTools.TabIndex = 1;
+            btnAdminTools.Text = "Admin Tools";
+            btnAdminTools.UseVisualStyleBackColor = true;
+            btnAdminTools.Visible = false;
+            btnAdminTools.Click += btnAdminTools_Click;
+            // 
+            // dgvPet
+            // 
+            dgvPet.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvPet.Location = new Point(29, 110);
+            dgvPet.Name = "dgvPet";
+            dgvPet.RowHeadersWidth = 51;
+            dgvPet.RowTemplate.Height = 29;
+            dgvPet.Size = new Size(850, 371);
+            dgvPet.TabIndex = 2;
+            // 
+            // cmbPet
+            // 
+            cmbPet.FormattingEnabled = true;
+            cmbPet.Location = new Point(352, 66);
+            cmbPet.Name = "cmbPet";
+            cmbPet.Size = new Size(205, 28);
+            cmbPet.TabIndex = 35;
+            cmbPet.SelectedIndexChanged += cmbPet_SelectedIndexChanged;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.Location = new Point(429, 22);
+            label5.Name = "label5";
+            label5.Size = new Size(42, 28);
+            label5.TabIndex = 34;
+            label5.Text = "Pet";
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnAdminTools);
-            this.Controls.Add(this.btnLogOut);
-            this.Name = "frmMain";
-            this.Text = "frmMain";
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(904, 522);
+            Controls.Add(cmbPet);
+            Controls.Add(label5);
+            Controls.Add(dgvPet);
+            Controls.Add(btnAdminTools);
+            Controls.Add(btnLogOut);
+            Name = "frmMain";
+            Text = "frmMain";
+            ((System.ComponentModel.ISupportInitialize)dgvPet).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private Button btnLogOut;
         private Button btnAdminTools;
+        private DataGridView dgvPet;
+        private ComboBox cmbPet;
+        private Label label5;
     }
 }

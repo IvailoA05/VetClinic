@@ -14,6 +14,7 @@ namespace VetClinic
         public static string con = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename={getDBPath}\\VetClinicDB.mdf;Integrated Security=True";
         
         public static bool isAdmin = false;
+        public static int id = 0;
         
         [STAThread]
         static void Main()

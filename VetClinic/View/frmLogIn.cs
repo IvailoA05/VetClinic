@@ -46,7 +46,16 @@ namespace VetClinic.View
                     command.Parameters.AddWithValue("@Password", password);
 
                     connection.Open();
-                    object isAdminObj = command.ExecuteScalar();
+                    SqlDataReader reader = command.ExecuteReader();
+                    int userId = 0;
+                    object isAdminObj = false;
+
+                    if (reader.HasRows)
+                    {
+                        reader.Read();
+                        userId = reader.GetInt32(0);
+                        isAdminObj = reader.GetBoolean(1);
+                    }
                     connection.Close();
 
                     if (isAdminObj != null && isAdminObj != DBNull.Value)

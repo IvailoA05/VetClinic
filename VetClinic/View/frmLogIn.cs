@@ -40,7 +40,7 @@ namespace VetClinic.View
             {
                 using (SqlConnection connection = new SqlConnection(Program.con))
                 {
-                    SqlCommand command = new SqlCommand("SELECT IsAdmin FROM [User] WHERE Username = @Username AND Password = @Password", connection);
+                    SqlCommand command = new SqlCommand("SELECT Id,IsAdmin FROM [User] WHERE Username = @Username AND Password = @Password", connection);
 
                     command.Parameters.AddWithValue("@Username", username);
                     command.Parameters.AddWithValue("@Password", password);
@@ -61,6 +61,7 @@ namespace VetClinic.View
                     if (isAdminObj != null && isAdminObj != DBNull.Value)
                     {
                         Program.isAdmin = (bool)isAdminObj;
+                        Program.USer_ID = (int)userId;
              
                         if (Program.isAdmin)
                         {
